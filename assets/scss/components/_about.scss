@@ -1,0 +1,85 @@
+@use '../abstracts/variables' as *;
+
+.blta-about {
+    &-1 {
+        &-section-title {
+            padding-left: 35px;
+            max-width: 600px;
+
+            @media #{$xs} {
+                padding-left: 0px;
+            }
+        }
+
+        &-img {
+            position: relative;
+            z-index: 1;
+
+            @media #{$md,$xs} {
+                margin-bottom: 100px;
+            }
+
+            .a1-il-1 {
+                position: absolute;
+                bottom: -130px;
+                left: -50px;
+                width: 55%;
+
+                @media #{$md,$xs} {
+                    bottom: -80px;
+
+                }
+            }
+        }
+
+        &-div {
+            display: grid;
+            grid-template-columns: 1.1fr 2fr;
+            gap: 40px;
+            align-items: center;
+
+            
+            @media #{$xs} {
+                grid-template-columns: 1fr;
+            }
+
+            
+            @media #{$sm} {
+                grid-template-columns: 1.1fr 2fr;
+            }
+
+            .a1-disc {
+                margin-bottom: 30px;
+            }
+        }
+
+
+
+        &-content-sig {
+
+            .sig-img {
+                margin-bottom: -40px;
+                width: 34%;
+            }
+
+            .content-wrap {
+                padding-left: 90px;
+            }
+
+            .sig-name {
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            .sig-disc {
+                color: #000;
+            }
+        }
+        
+        
+    }
+    
+}
+
+
+

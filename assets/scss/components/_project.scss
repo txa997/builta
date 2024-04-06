@@ -1,0 +1,215 @@
+@use '../abstracts/variables' as *;
+
+/* 
+    project-1-start
+*/
+
+.blta-project {
+    &-1 {
+        &-area {
+            position: relative;
+            z-index: 1;
+        }
+
+        &-il-1 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 28%;
+            opacity: 45%;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+        &-il-2 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 24%;
+            opacity: 45%;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+
+        &-section-title {
+            max-width: 830px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .icon {
+                width: 80px;
+                height: 80px;
+                display: inline-flex;
+                background: #000;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 35px;
+            }
+        }
+
+        &-item {
+            &-row {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+
+                @media #{$md} {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                @media #{$xs} {
+                    grid-template-columns: 1fr;
+                }
+            }
+            
+            &-single {
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                padding-bottom: 35px;
+
+                .main-img {
+                    width: 100%;
+                    height: 590px;
+                    
+                    @media #{$xl,$lg,$md,$xs} {
+                        height: 500px;
+                    }
+                }
+
+                .item-title {
+                    background: var(--blta-pr-1);
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    padding: 35px 30px;
+                    width: 85%;
+                    font-size: 28px;
+                    transition: 400ms var(--cube-1);
+
+                    @media #{$xl,$lg,$md,$xs} {
+                        padding: 25px 15px;
+                        width: 95%;
+                        font-size: 20px;
+                    }
+
+                    i {
+                        font-size: 35px;
+                        @media #{$xl,$lg,$md,$xs} {
+                            font-size: 25px;
+                        }
+                    }
+                    a {
+                        gap: 15px;
+                    }
+
+     
+                    
+                }
+
+                .item-title-2 {
+                    font-size: 40px;
+                    transition: 400ms var(--cube-1);
+
+                    @media #{$xl,$lg,$md,$xs} {
+                        font-size: 25px;
+                    }
+
+                    &:hover {
+                        color: var(--blta-pr-1);
+                        letter-spacing: .4px;
+                    }
+                }
+
+                .item-disc {
+                    color: #dddddd;
+                    margin-bottom: auto;
+                }
+
+
+                .hover-content {
+                    position: absolute;
+                    top: -20%;
+                    left: 0;
+                    z-index: 1;
+                    width: 100%;
+                    height: calc(100% - 35px);
+                    padding: 70px 50px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    justify-content: space-between;
+                    opacity: 0;
+                    transition: 500ms var(--cube-2);
+
+                    @media #{$lg,$md,$xs} {
+                        padding: 50px 20px;
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background: #000;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                        opacity: 60%;
+                    }
+
+                    &::before {
+                        content: "";
+                        width: 0%;
+                        height: 1px;
+                        background: var(--blta-pr-1);
+                        position: absolute;
+                        bottom: 110px;
+                        right: 0;
+                        z-index: 1;
+                        transition: 2000ms var(--cube-1);
+
+                        @media #{$lg,$md,$xs} {
+                            bottom: 90px;
+                        }
+    
+                    }
+                }
+
+                &:hover {
+
+                    .item-title {
+                        bottom: 135px;
+                        opacity: 0;
+                    }
+                    .hover-content  {
+                        top: 0;
+                        opacity: 1;
+
+                        &::before {
+                            width: 65%;
+
+                            @media #{$xl,$lg,$md,$xs} {
+                                width: 40%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/* 
+    project-1-end
+*/
+
+button { padding: 1.25rem; border: 0; border-radius: 3px; background-color: #4F46E5; color: #fff; background:linear-gradient(102deg, rgb(0, 153, 255) 0%, rgb(204, 0, 255) 100%); cursor: pointer; }

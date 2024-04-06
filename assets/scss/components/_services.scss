@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *;
+
+/* 
+    services-1-start
+*/
+
+.blta-services {
+    &-1 {
+        &-border-bottom {
+            border-bottom: 2px solid #f7f7f7;
+        }
+
+        &-item {
+            padding: 0 30px;
+            padding-top: 45px;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 30px;
+        
+            &::after {
+                content: "";
+                width: 156px;
+                height: 200px;
+                border-radius: 80px;
+                background: #fafafa;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 0;
+                z-index: -1;
+            }
+        
+            .s1-icon {
+                font-size: 70px;
+                margin-bottom: 35px;
+            }
+        
+            
+            .s1-title{
+                font-size: 30px;
+                margin-bottom: 17px;
+
+                @media #{$xs} {
+                    font-size: 24px;
+                }
+
+                @media #{$sm} {
+                    font-size: 26px;
+                }
+            }
+        }
+    }
+}
+
+/* 
+    services-1-end
+*/

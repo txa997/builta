@@ -345,7 +345,7 @@ sliders.forEach(function(slider) {
 
 // cursor follow
 $(document).ready(function () {
-	var mWrap = $(".gly-project-4-item .item-img ");
+	var mWrap = $(".blta-categories-1-tabs-content ");
   
 	mWrap.hover(function () {
 	  var mContent = $(this).find("#magnetic-content");
@@ -361,7 +361,7 @@ $(document).ready(function () {
 		  x: (relX - boundingRect.width / 2) * movement,
 		  y: (relY - boundingRect.height / 2 - scrollTop) * movement,
 		  ease: "power1",
-		  duration: 0.6
+		  duration: 1
 		});
 	  }
   
@@ -378,7 +378,7 @@ $(document).ready(function () {
 		  x: 0,
 		  y: 0,
 		  ease: "power1",
-		  duration: 0.6
+		  duration: 1.5
 		});
 	  });
 	});
@@ -470,7 +470,6 @@ if($('.popup_img').length) {
 		},
 	});
 }
-
 
 
 })(jQuery);
