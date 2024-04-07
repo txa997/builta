@@ -1,0 +1,167 @@
+@use '../abstracts/variables' as *;
+
+
+/* 
+    product-1-start
+*/
+
+.blta-product-1 {
+    &-slider {
+        position: relative;
+        z-index: 1;
+
+        &-item {
+            max-width: 310px;
+            background: #fff;
+            border-radius: 10px;
+            padding: 40px 50px;
+            position: relative;
+            transition: 500ms var(--cube-1);
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 40px 15px;
+            }
+
+            &-img {
+                height: 230px;
+            }
+
+            &-price {
+                font-size: 18px;
+                background: #e7e7e7;
+                padding: 7px 22px;
+                border-radius: 25px;
+                margin-bottom: 20px;
+                display: inline-block;
+                transition: 500ms var(--cube-1);
+            }
+            
+            &-name {
+                font-size: 25px;
+                transition: 500ms var(--cube-1);
+            }
+
+            &-btn {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            &-hover-content {
+                position: absolute;
+                bottom: 150px;
+                left: 0;
+                width: 100%;
+                opacity: 0;
+                will-change: bottom;
+                transition: 500ms var(--cube-1);
+            }
+
+            &-bg {
+                border-radius: 10px;
+                background: var(--blta-pr-1);
+                display: inline-block;
+                transition: 500ms var(--cube-1);
+
+                &:hover {
+                    transform: scaleY(105%);
+                    .blta-product-1-slider-item {
+                        transform: scale(90%);
+                        .blta-product-1-slider-item-hover-content {
+                            bottom: 94px;
+                            opacity: 1;
+                            .blta-product-1-slider-item-price {
+                                opacity: 1;
+                            }
+                        }
+                        .blta-product-1-slider-item-name {
+                            opacity: 0;
+                        }
+                        .blta-product-1-slider-item-price {
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .swiper-container {
+            padding: 15px 0;
+        }
+
+        &-btn {
+            gap: 30px;
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                padding-top: 20px;   
+            }
+
+            .blta-slider-btn-1  {
+                color: #000;
+                border-color: #000;
+
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+
+            .blta_product_1_prev {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: -95px;
+
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    position: unset;
+                    transform: unset;
+                }
+            }
+
+            .blta_product_1_next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -95px;
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    position: unset;
+                    transform: unset;
+                }
+            }
+        }
+
+    }
+}
+
+
+.blta-product-action-btn {
+    display: inline-flex;
+    flex: 0 0 auto;
+    width: 66px;
+    height: 66px;
+    background: #000;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 22px;
+    transition: 400ms var(--cube-1);
+    i {
+        transition: 400ms var(--cube-1);
+        display: inline-block;
+    }
+
+    &:hover {
+        color: #fff;
+        transform: scale(90%);
+        background: var(--blta-pr-1);
+        i {
+            transform: scale(105%);
+        }
+    }
+
+}
+
+/* 
+    product-1-end
+*/

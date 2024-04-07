@@ -142,37 +142,40 @@
                 z-index: 2;
             }
     
-            display: flex;
-            flex: 0 0 auto;
-            justify-content: center;
-            align-items: center;
-            width: 55px;
-            height: 55px;
-            border-radius: 50%;
-            border: 1px solid #fff;
-            color: #fff;
-            font-size: 20px;
-            cursor: pointer;
-            transition: 400ms var(--cube-1);
-
-            i {
-                display: inline-block;
-                transition: 500ms var(--cube-2);
-            }
-    
-    
-            &:hover {
-                background-color: var(--blta-pr-1);
-                border-color: transparent;
-                transform: scale(95%);
-
-                i {
-                    transform: rotateY(360deg);
-                }
-            }
         }
     }
     
+}
+
+.blta-slider-btn-1 {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 400ms var(--cube-1);
+
+    i {
+        display: inline-block;
+        transition: 500ms var(--cube-2);
+    }
+
+
+    &:hover {
+        background-color: var(--blta-pr-1);
+        border-color: transparent;
+        transform: scale(95%);
+
+        i {
+            transform: rotateY(360deg);
+        }
+    }
 }
 
 

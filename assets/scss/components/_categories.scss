@@ -27,19 +27,25 @@
             left: 67%;
             transform: translateX(-50%);
             z-index: 1;
-            width: 34%;
+            width: 640px;
 
             @media #{$xxxl} {
                 left: 72%;
             }
+            @media #{$xxl} {
+                width: 34%;
+            }
             @media #{$xl} {
                 left: 72%;
+                width: 34%;
             }
             @media #{$lg} {
                 left: 82%;
+                width: 34%;
             }
             @media #{$md,$xs} {
                 display: none;
+                width: 34%;
             }
         }
 

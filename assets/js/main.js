@@ -302,11 +302,6 @@ if($('.news5-img').length) {
 }
 
 
-
-
-
-
-
 // hero-1-slider
 if($('.blta-hero-1-active').length) {
 	let hero1 = new Swiper('.blta-hero-1-active', {
@@ -327,20 +322,72 @@ if($('.blta-hero-1-active').length) {
 }
 
 
-var sliders = document.querySelectorAll('.swiper-slide');
+  
+// team-1-active
+let team1_thumb = new Swiper('.team-1-slider-prw-active', {
+	spaceBetween: 30,
+	loop: true,
+	speed: 1000,
+	// watchSlidesProgress: true,	
+	slidesPerView: 2,
 
-function onSlideActive() {
-    console.log("hello");
-}
-
-sliders.forEach(function(slider) {
-    if (slider.classList.contains('swiper-slide-active')) {
-		setTimeout(function() {
-			onSlideActive();
-		}, 2000); 
-
-    }
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		480: {
+			slidesPerView: 2,
+		},
+	  },
 });
+
+let team1 = new Swiper('.team-1-slider-main-active', {
+	loop: true,
+	spaceBetween: 0,
+	slidesPerView: 1,
+	speed: 1000,
+	autoplay: {
+		delay: 5000,
+		},
+	thumbs: {
+		swiper: team1_thumb,
+	},
+});
+
+
+// product-1-active
+let product1 = new Swiper('.product-1-slider-active', {
+	loop: true,
+	spaceBetween: 20,
+	slidesPerView: 1,
+	speed: 1000,
+	autoplay: {
+		delay: 5000,
+	},
+	navigation: {
+		nextEl: ".blta_product_1_next",
+		prevEl: ".blta_product_1_prev",
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 3,
+		},
+		1200: {
+			slidesPerView: 4,
+		},
+	},
+});
+
+
 
 
 // cursor follow

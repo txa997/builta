@@ -1,0 +1,166 @@
+@use '../abstracts/variables' as *;
+
+
+/* 
+    process-1-start
+*/
+
+.blta-process {
+    &-1 {
+        &-area {
+            position: relative;
+            z-index: 1;
+            background-color: #efefef;
+        }
+
+        &-il-1 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            width: 20%;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+        &-il-2 {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            width: 16%;
+
+            @media #{$xs} {
+                display: none;
+            }
+        }
+
+        &-content {
+            @media #{$md,$xs} {
+                margin-bottom: 40px;
+            }
+        }
+
+        &-tabs-btn {
+            display: flex;
+            gap: 10px 30px;
+            flex-wrap: wrap;
+
+            .nav-link {
+                background: transparent;
+                font-size: 20px;
+                position: relative;
+                z-index: 1;
+
+                &::after {
+                    content: "";
+                    width: 0%;
+                    height: 1px ;
+                    background-color: #000;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    transition: 400ms var(--cube-2);
+                }
+
+                &:hover {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+
+                &:is(.active) {
+                    &::after {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &-content {
+            .inner-div {
+                gap: 30px;
+
+                @media #{$xs} {
+                    flex-wrap: wrap;
+                }
+                @media #{$sm} {
+                    flex-wrap: nowrap;
+                }
+            }
+            .blta-ply-btn-1 {
+                background-color: #fff;
+
+                &-svg {
+                    font-size: 22px;
+                }
+
+                &-icon-home {
+                    width: 60px;
+                    height: 60px;
+                    background: #000;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    color: #fff;
+                }
+            }
+        }
+
+        &-right {
+            position: relative;
+            z-index: 1;
+        }
+
+        &-img {
+            height: 513px;
+        }
+
+        &-card {
+            position: absolute;
+            bottom: -60px;
+            left: -141px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                left: -80px;
+            }
+        }
+    }
+}
+
+
+.blta-list-1 {
+    &-title {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 12px;
+    }
+
+    &-item {
+        position: relative;
+        z-index: 1;
+        padding-left: 30px;
+
+        &::after {
+            content: "";
+            width: 15px;
+            height: 15px;
+            border: 5px solid var(--blta-pr-1);
+            background: transparent;
+            position: absolute;
+            left: 0;
+            top: 6px;
+            border-radius: 50%;
+        }
+        
+    }
+
+    
+}
+
+/* 
+    process-1-start
+*/

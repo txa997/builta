@@ -1,0 +1,137 @@
+@use '../abstracts/variables' as *;
+
+/* 
+    team-1-start
+*/
+
+.blta-team-1 {
+
+    &-area {
+        position: relative;
+        z-index: 1;
+    }
+
+    &-il-1 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 41%;
+        margin-right: -230px;
+    }
+
+    &-section-title {
+        .blta-para-1 {
+            max-width: 590px;
+        }
+    }
+
+    &-content {
+        .inner-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .inner-div-2 {
+            display: flex;
+            gap: 30px 90px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+    }
+
+    &-slider-main {
+        margin-left: -50px;
+        padding-right: 80px;
+        position: relative;
+        z-index: 1;
+
+        @media #{$xxl,$xl,$lg} {
+            margin-left:  0px;
+            padding-right: 0px;
+        }
+
+        @media #{$md,$xs} {
+            margin-left:  0px;
+            padding-right: 0px;
+            margin-bottom: 50px;
+        }
+
+        &::after {
+            content: "";
+            width: 319px;
+            height: 78%;
+            background: #fafafa;
+            border-radius: 0 250px 0 0;
+            position: absolute;
+            right: 40px;
+            bottom: 0;
+        }
+    }
+
+
+    &-slider-prw {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 320px;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 156px;
+            background: linear-gradient(90deg, rgba(228,228,228,1) 0%, rgba(247,247,247,1) 100%);
+            position: absolute;
+            left: -40px;
+            bottom: 0;
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                left: 0px;
+            }
+        }
+
+        &-img  {
+            height: 195px;
+            width: 145px;
+            overflow: hidden;
+            img {
+                transition: 400ms var(--cube-2);
+                transform-origin: bottom center;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(95%);
+                }    
+                    
+            }
+        }
+    }
+}
+
+
+.blta-mail-link-1 {
+    gap: 15px;
+
+    .item-title {
+        font-size: 17px;
+        margin-bottom: 5px;
+    }
+    .item-link {
+        font-size: 21px;
+    }
+}
+.blta-mail-icon-1 {
+    width: 67px;
+    height: 67px;
+    background: var(--blta-pr-1);
+    border-radius: 50%;
+    font-size: 26px;
+}
+
+/* 
+    team-1-start
+*/
