@@ -14,8 +14,9 @@
 
 		<!-- CSS here -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="assets/css/all.min.css">
         <link rel="stylesheet" href="assets/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
         <link rel="stylesheet" href="assets/css/animate.css">
         <link rel="stylesheet" href="assets/css/magnific-popup.css">
         <link rel="stylesheet" href="assets/css/main.css">
@@ -262,9 +263,7 @@
                                 </a>
 
                                 <!-- header-btn -->
-                                <a class="blta-btn-1" href="#" aria-label="name">
-                                    <span class="text">get a quote</span>
-                                </a>
+                                <a class="blta-btn-1" href="#" aria-label="name"  data-back="Get a quote" data-front="Get a quote"></a>
 
                                 <!-- sidebar-btn -->
                                 <button type="button" aria-label="name" class="gly-mobile-menu-btn-1 d-flex d-lg-none" id="menuToggle">
@@ -567,9 +566,7 @@
                                         <h5 class="blta-subtitle-1 has-color-white font-700 text-uppercase pr-font"><span class="icon"><i class="fa-solid fa-house-user fa-fw"></i></span>Welcome to Our Company</h5>
                                         <h1 class="blta-hero-1-slider-item-title blta-heading-1 has-color-white font-800 gly-split-in-clr gly-split-text">Create the Building You Want Here</h1>
                                         <p class="blta-hero-1-slider-item-disc blta-para-1 has-color-white">Busico is a construction and architecture environmentally most responsible for any kinds of themes.</p>
-                                        <a class="blta-btn-1" href="#" aria-label="name">
-                                            <span class="text">get a quote</span>
-                                        </a>
+                                        <a class="blta-btn-1" href="#" aria-label="name"  data-back="Get a quote" data-front="Get a quote"></a>
                                     </div>
                                 </div>
                             </div>
@@ -1552,7 +1549,7 @@
         <!-- product-end -->
 
         <!-- range-start -->
-        <div class="blta-range-1-area">
+        <div class="blta-range-1-area pt-135 pb-160">
             <div class="container blta-container-1">
 
                 <!-- section-title -->
@@ -1563,10 +1560,10 @@
                     </div>
                     <div class="right">
                         <div class="blta-range-1-slider-btn d-flex align-items-center">
-                            <div class="blta-slider-btn-1 blta_range_1_prev">
+                            <div class="blta-slider-btn-1 range_1_prev">
                                 <i class="far fa-long-arrow-left"></i>
                             </div>
-                            <div class="blta-slider-btn-1 blta_range_1_next">
+                            <div class="blta-slider-btn-1 range_1_next">
                                 <i class="far fa-long-arrow-right"></i>
                             </div>
                         </div>
@@ -1600,11 +1597,60 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- single-slide -->
+                            <div class="swiper-slide">
+                                <div class="blta-range-1-slider-item">
+                                    <div class="main-img img-cover fix">
+                                        <img src="assets/img/range/range-img-2.png" alt="">
+                                    </div>
+                                    <div class="content-wrap">
+                                        <h3 class="item-title blta-heading-1 has-color-white font-700">
+                                            SickKids Project Horizon Support Centre
+                                        </h3>
+                                        <p class="item-disc blta-para-1">A modern, technology-enabled, wellness-focused 
+                                            workspace and sustainable office tower, SickKids 
+                                            Patient Support Centre.</p>
+                                        <ul class="item-list  mb-35">
+                                            <li class="blta-para-1 has-color-white"><b>LOCATION:</b>   United State</li>
+                                            <li class="blta-para-1 has-color-white"><b>DATE:</b>  1990-2000</li>
+                                        </ul>
+                                        <a class="blta-btn-1" href="#" aria-label="name">
+                                            <span class="text">more about us</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- single-slide -->
+                            <div class="swiper-slide">
+                                <div class="blta-range-1-slider-item">
+                                    <div class="main-img img-cover fix">
+                                        <img src="assets/img/range/range-img-3.png" alt="">
+                                    </div>
+                                    <div class="content-wrap">
+                                        <h3 class="item-title blta-heading-1 has-color-white font-700">
+                                            SickKids Project Horizon Support Centre
+                                        </h3>
+                                        <p class="item-disc blta-para-1">A modern, technology-enabled, wellness-focused 
+                                            workspace and sustainable office tower, SickKids 
+                                            Patient Support Centre.</p>
+                                        <ul class="item-list  mb-35">
+                                            <li class="blta-para-1 has-color-white"><b>LOCATION:</b>   United State</li>
+                                            <li class="blta-para-1 has-color-white"><b>DATE:</b>  1990-2000</li>
+                                        </ul>
+                                        <a class="blta-btn-1" href="#" aria-label="name">
+                                            <span class="text">more about us</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
 
-                <div class="blta-range-1-content d-flex align-items-center">
+                <div class="blta-range-1-content d-flex align-items-center flex-wrap">
                     <img src="assets/img/range/range-group-1.png" alt="" class="group">
                     <p class="blta-para-1 call-link">Sales representative <a class="font-500 blta-heading-1" href="phone:+1 (251) 344 0 66" aria-label="name">+1 (251) 344 0 66</a> free call !</p>
                 </div>
@@ -1612,6 +1658,358 @@
             </div>
         </div>
         <!-- range-end -->
+
+        <!-- price-start -->
+        <div class="blta-price-1-area bg-default" data-background="assets/img/price/price-bg-1.png">
+            <div class="container blta-container-1">
+                <div class="row align-items-xxl-center">
+
+                    <!-- left-form -->
+                    <div class="col-lg-8">
+                        <div class="blta-price-1-content">
+
+                            <!-- section-title -->
+                            <div class="blta-price-1-section-title mb-50">
+                                <h5 class="blta-subtitle-1 font-700 text-uppercase pr-font d-inline-flex"><span class="icon"><i class="fa-solid fa-house-user fa-fw"></i></span>Welcome to Our Company</h5>
+                                <h2 class="blta-section-title-1 ">Book Your Construction </h2>
+                            </div>
+
+                            <div class="booking-price-bg">
+                                <!-- form -->
+                                <div class="blta-booking-form-wrap">
+                                    <p class="blta-para-1 form-disc">To get the cost estimation of your house please select from the following:
+                                    </p>
+
+                                    <form action="" class="blta-booking-form">
+                                        <div class="input-item has-full-width">
+                                            <label class="blta-heading-1 font-700 form-label" for="house area"><i class="fa-solid fa-house"></i>house area</label>
+                                            <div class="nice-select option-selector " tabindex="0">
+                                                <span class="current blta-para-1 text-capitalize">choose area</span>
+                                                <ul class="list">
+                                                    <li data-value="option 1" class="option focus blta-para-1 text-capitalize">option 1</li>
+                                                    <li data-value="option 2" class="option selected blta-para-1 text-capitalize">option 2</li>
+                                                    <li data-value="option 3" class="option blta-para-1 text-capitalize">option 3</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="input-item">
+                                            <label class="blta-heading-1 font-700 form-label" for="room"><i class="fa-solid fa-bed-front"></i>room</label>
+                                            <div class="nice-select option-selector " tabindex="0">
+                                                <span class="current blta-para-1 text-capitalize">select room</span>
+                                                <ul class="list">
+                                                    <li data-value="option 1" class="option focus blta-para-1 text-capitalize">option 1</li>
+                                                    <li data-value="option 2" class="option selected blta-para-1 text-capitalize">option 2</li>
+                                                    <li data-value="option 3" class="option blta-para-1 text-capitalize">option 3</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="input-item">
+                                            <label class="blta-heading-1 font-700 form-label" for="bathroom"><i class="fa-solid fa-toilet"></i>bathroom</label>
+                                            <div class="nice-select option-selector " tabindex="0">
+                                                <span class="current blta-para-1 text-capitalize">select bathroom</span>
+                                                <ul class="list">
+                                                    <li data-value="option 1" class="option focus blta-para-1 text-capitalize">option 1</li>
+                                                    <li data-value="option 2" class="option selected blta-para-1 text-capitalize">option 2</li>
+                                                    <li data-value="option 3" class="option blta-para-1 text-capitalize">option 3</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </form>
+
+                                </div>
+                                <!-- price-tabs -->
+                                <div class="blta-price-tabs-wrap ">
+                                    <h5 class="title blta-heading-1 text-capitalize font-800 has-color-white text-center">building materials</h5>
+                                    <div class="blta-price-tabs-block mb-25">
+
+                                        <!-- tabs-btn -->
+                                        <div class="blta-price-tabs-btn" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                            <button class="nav-link active blta-heading-1 font-700" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">A+ Grey Structure</button>
+                                            <button class="nav-link blta-heading-1 font-700" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Premium Finishing</button>
+                                        </div>
+                                        
+                                        <!-- tabs-content -->
+                                        <div class="tab-content blta-price-tabs-content" id="v-pills-tabContent">
+                                            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                                <div class="blta-price-tabs-content-block ">
+                                                    <h6 class="price-title has-color-white blta-heading-1 font-700">Estimated Price :</h6>
+                                                    <h4 class="price has-color-white blta-heading-1 font-700">$ 90,000</h4>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                                <div class="blta-price-tabs-content-block ">
+                                                    <h6 class="price-title has-color-white blta-heading-1 font-700">Estimated Price :</h6>
+                                                    <h4 class="price has-color-white blta-heading-1 font-700">$ 70,000</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <p class="disc blta-para-1 text-capitalize has-color-white text-center">A+ House Construction Estimated by Segmenting Material Cost Based
+                                    </p>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                    <!-- right-img -->
+                    <div class="col-lg-4">
+                        <div class="blta-price-1-img">
+                            <img src="assets/img/price/price-img-1.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <!-- price-end -->
+
+        <!-- blog-start -->
+        <div class="blta-blog-1-area pt-140 pb-125">
+            <div class="container blta-container-1">
+
+                <!-- section-title -->
+                <div class="blta-blog-1-section-title text-center mb-50">
+                    <h5 class="blta-subtitle-1 font-700 text-uppercase pr-font d-inline-flex"><span class="icon"><i class="fa-solid fa-house-user fa-fw"></i></span>news</h5>
+                    <h2 class="blta-section-title-1 ">Articles & Blog Posts </h2>
+                </div>
+                <div class="blta-blog-1-row">
+
+                    <!-- single-blog -->
+                    <div class="blta-blog-1-item">
+                        <div class="main-img img-cover fix">
+                            <img src="assets/img/blog/blog-1.png" alt="">
+                        </div>
+                        <div class="content-wrap">
+                            <p class="item-date blta-heading-1 has-color-white">January 20, 2024</p>
+                            <h3 class="item-title blta-heading-1 font-800">
+                                <a href="#">Completes Bill and Adele Jonas Center</a>
+                            </h3>
+                            <div class="item-author">
+                                <div class="author-img img-cover fix">
+                                    <img src="assets/img/blog/author-1.png" alt="">
+                                </div>
+                                <p class="blta-heading-1 author-name font-700"><span>by</span> Makina Jona</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- single-blog -->
+                    <div class="blta-blog-1-item">
+                        <div class="main-img img-cover fix">
+                            <img src="assets/img/blog/blog-2.png" alt="">
+                        </div>
+                        <div class="content-wrap">
+                            <p class="item-date blta-heading-1 has-color-white">January 25, 2024</p>
+                            <h3 class="item-title blta-heading-1 font-800">
+                                <a href="#">Differently to build bigger and better</a>
+                            </h3>
+                            <div class="item-author">
+                                <div class="author-img img-cover fix">
+                                    <img src="assets/img/blog/author-2.png" alt="">
+                                </div>
+                                <p class="blta-heading-1 author-name font-700"><span>by</span> john week</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- single-blog -->
+                    <div class="blta-blog-1-item">
+                        <div class="main-img img-cover fix">
+                            <img src="assets/img/blog/blog-3.png" alt="">
+                        </div>
+                        <div class="content-wrap">
+                            <p class="item-date blta-heading-1 has-color-white">January 28, 2024</p>
+                            <h3 class="item-title blta-heading-1 font-800">
+                                <a href="#">Most Resale Value to 
+                                    Your Home</a>
+                            </h3>
+                            <div class="item-author">
+                                <div class="author-img img-cover fix">
+                                    <img src="assets/img/blog/author-3.png" alt="">
+                                </div>
+                                <p class="blta-heading-1 author-name font-700"><span>by</span> Jona Makina</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- blog-end -->
+
+        <!-- line -->
+        <div class="container blta-container-1">
+            <span class="blta-line-1"></span>
+        </div>
+
+        <!-- client-start -->
+        <div class="blta-client-1-area pt-100 pb-115">
+            <div class="container blta-container-1">
+                <div class="row align-items-center">
+                    
+                    <!-- left-title -->
+                    <div class="col-lg-5">
+                        <!-- section-title -->
+                        <div class="blta-client-1-section-title">
+                            <h5 class="blta-subtitle-1 font-700 text-uppercase pr-font "><span class="icon"><i class="fa-solid fa-house-user fa-fw"></i></span>our client</h5>
+                            <h2 class="blta-section-title-1 ">We’ve 1500+ Global Premium Clients</h2>
+                            <p class="blta-para-1 ">A modern, technology-enabled, wellness-focused workspace and sustainable office tower, </p>
+                        </div>
+                    </div>
+
+                    <!-- right-logo -->
+                    <div class="col-lg-7">
+                        <div class="blta-client-1-logo-grid">
+                            <a href="#" aria-label="name"  class="blta-client-1-logo">
+                                <img src="assets/img/client/client-1.png" alt="">
+                            </a>
+                            <a href="#" aria-label="name"  class="blta-client-1-logo">
+                                <img src="assets/img/client/client-1.png" alt="">
+                            </a>
+                            <a href="#" aria-label="name"  class="blta-client-1-logo">
+                                <img src="assets/img/client/client-1.png" alt="">
+                            </a>
+                            <a href="#" aria-label="name"  class="blta-client-1-logo">
+                                <img src="assets/img/client/client-1.png" alt="">
+                            </a>
+                            <a href="#" aria-label="name"  class="blta-client-1-logo">
+                                <img src="assets/img/client/client-1.png" alt="">
+                            </a>
+                            <a href="#" aria-label="name"  class="blta-client-1-logo">
+                                <img src="assets/img/client/client-1.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- client-end -->
+
+        <!-- footer-start -->
+        <div class="blta-footer-1-area">
+            
+            <!-- top-footer -->
+            <div class="container blta-container-1">
+                <div class="blta-footer-1-top d-flex align-items-center flex-wrap justify-content-between pt-25 pb-25">
+
+                    <!-- social-link -->
+                    <div class="blta-social-link-1 d-flex flex-wrap align-items-center">
+                        <a href="#" aria-label="name" class="link">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="name" class="link">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="name" class="link">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="name" class="link">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </div>
+
+                    <!-- menu -->
+                    <div class="blta-footer-1-top-menu blta-heading-1 font-800">
+                        <a href="#" aria-label="name" class="links">blog</a>
+                        <a href="#" aria-label="name" class="links">affiliates</a>
+                        <a href="#" aria-label="name" class="links">pricing</a>
+                        <a href="#" aria-label="name" class="links">downloads</a>
+                        <a href="#" aria-label="name" class="links">live demos</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <span class="blta-line-2"></span>
+
+            <div class="container blta-container-1">
+                <div class="blta-footer-1-widget-wrap pt-85 pb-85">
+
+                    <!-- single-widget -->
+                    <div class="blta-footer-1-widget">
+                        <h3 class="blta-footer-1-widget-title blta-heading-1 font-700 has-color-white">supports</h3>
+                        <div class="blta-footer-1-menu blta-heading-1">
+                            <a href="#" aria-label="name" class="links">Documentation</a>
+                            <a href="#" aria-label="name" class="links">Forums</a>
+                            <a href="#" aria-label="name" class="links">FAQs</a>
+                            <a href="#" aria-label="name" class="links">Support Policy</a>
+                        </div>
+                    </div>
+
+                    <!-- single-widget -->
+                    <div class="blta-footer-1-widget">
+                        <h3 class="blta-footer-1-widget-title blta-heading-1 font-700 has-color-white">contact</h3>
+                        <ul class="blta-footer-1-contact">
+                            <li class="d-flex blta-heading-1" >
+                                <span class="icon"><i class="fa-regular fa-location-dot"></i></span>
+                                901 N Pitt Str., Suite 170, VA 22314, USA
+                            </li>
+                            <li class="d-flex blta-heading-1" >
+                                <span class="icon"><i class="fa-light fa-mobile"></i></span>
+                                <a href="#">(+380) 50 318 47 07</a>
+                            </li>
+                            <li class="d-flex blta-heading-1" >
+                                <span class="icon"><i class="fa-light fa-envelope-open"></i></span>
+                                <a href="#">username@domain.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- single-widget -->
+                    <div class="blta-footer-1-widget">
+                        <h3 class="blta-footer-1-widget-title blta-heading-1 font-700 has-color-white">terms</h3>
+                        <div class="blta-footer-1-menu blta-heading-1">
+                            <a href="#" aria-label="name" class="links">Terms of Use</a>
+                            <a href="#" aria-label="name" class="links">Copyright Notice</a>
+                            <a href="#" aria-label="name" class="links">Refund Policy</a>
+                            <a href="#" aria-label="name" class="links">Privacy Policy</a>
+                        </div>
+                    </div>
+
+                    <!-- single-widget -->
+                    <div class="blta-footer-1-widget">
+                        <h3 class="blta-footer-1-widget-title blta-heading-1 font-700 has-color-white">newsletter</h3>
+                       <p class="blta-footer-1-disc blta-para-1">Dont’t miss any updates of our new templates and extensions and al the astonishing we bring for you.</p>
+
+                       <form action="#" class="blta-footer-1-form">
+                            <input aria-label="name" class="form-input" type="gmail" placeholder="Email Address">
+                            <button type="button" aria-label="name" class="form-btn blta-heading-1" >subscribe</button>
+                        </form>
+                    
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <span class="blta-line-2"></span>
+
+            <div class="container blta-container-1">
+                <h4 class="blta-footer-1-about blta-heading-1 font-800 has-color-white">about company</h4>
+            </div>
+
+            <div class="container blta-container-1">
+                <div class="blta-footer-1-bottom pt-30 pb-30">
+                    <a href="index.html" aria-label="name" class="blta-footer-1-logo d-block">
+                        <img src="assets/img/logo/logo-2.png" alt="">
+                    </a>
+                    <p class="blta-footer-1-disc blta-para-1 ">Discover thousands of easy to customize themes, templates & CMS products, made by world-class developers.</p>
+
+                    <p class="blta-footer-1-copyright has-color-white blta-para-1">© 2015 - 2024 <a href="https://themexriver.com/" target="_blank" rel="noopener">themexriver</a> I All Rights Reserved</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- footer-end -->
 
         <!-- search-popup -->
         <div class="popup-search-box search_1_popup_active ">
@@ -1646,6 +2044,7 @@
         <script src="assets/js/magnific-popup.min.js"></script>
         <script src="assets/js/SplitText.min.js"></script>
         <script src="assets/js/gsap.min.js"></script>
+        <script src="assets/js/nice-select.min.js"></script>
         <script src="assets/js/counterup.min.js"></script>
         <script src="assets/js/waypoints.min.js"></script>
         <script src="assets/js/lenis.min.js"></script>

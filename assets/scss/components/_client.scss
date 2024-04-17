@@ -1,0 +1,57 @@
+@use '../abstracts/variables' as *;
+
+/* 
+    client-1-start
+*/
+
+.blta-client-1 {
+    &-section-title {
+        @media #{$md,$xs} {
+            margin-bottom: 50px;
+        }
+
+        .blta-para-1 {
+            max-width: 450px;
+        }
+    }
+    &-logo {
+        &-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+
+            @media #{$xs} {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media #{$sm} {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        display: flex;
+        border: 1px solid #d0d0d0;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        padding: 35px 15px;
+        transition: 500ms var(--cube-2);
+
+        img {
+            transition: 500ms var(--cube-2);
+        }
+
+        &:hover {
+            transform: scale(85%);
+
+            img {
+                transform: scale(140%);
+            }
+        }
+    }
+}
+
+
+/* 
+    client-1-end
+*/

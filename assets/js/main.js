@@ -388,6 +388,22 @@ let product1 = new Swiper('.product-1-slider-active', {
 });
 
 
+// range-1-active
+let range1 = new Swiper('.range-1-active', {
+	loop: true,
+	spaceBetween: 0,
+	slidesPerView: 1,
+	speed: 2000,
+	autoplay: {
+		delay: 5000,
+	},
+	navigation: {
+		nextEl: ".range_1_next",
+		prevEl: ".range_1_prev",
+	},
+});
+
+
 
 
 // cursor follow
@@ -517,6 +533,15 @@ if($('.popup_img').length) {
 		},
 	});
 }
+
+/*
+popup-img-activition
+====start====
+*/
+if($('.nice-select').length) {
+	$('.nice-select select').niceSelect();
+}
+
 
 
 })(jQuery);

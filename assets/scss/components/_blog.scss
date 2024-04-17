@@ -1,0 +1,116 @@
+@use '../abstracts/variables' as *;
+
+/* 
+    blog-1-start
+*/
+
+
+.blta-blog-1 {
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px;
+
+        @media #{$lg} {
+            gap: 30px;
+        }
+
+        @media #{$md} {
+            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            gap: 30px;
+            grid-template-columns: 1fr ;
+        }
+    }
+    &-item {
+        .main-img {
+            height: 290px;
+        }
+
+        .content-wrap {
+            padding: 0 45px;
+            background: #f9f9f9;
+            padding-bottom: 35px;
+
+            @media #{$lg,$md,$xs} {
+                padding: 0 20px;
+                padding-bottom: 35px;
+            }
+        }
+
+        .item-date {
+            background-color: #000;
+            display: inline-block;
+            font-weight: 700;
+            font-size: 16px;
+            padding: 7px 10px;
+            border-radius: 30px;
+            transform: translateY(-17px);
+        }
+        .item-title {
+            font-size: 30px;
+            margin-bottom: 35px;
+            transition: 400ms var(--cube-1);
+
+            @media #{$lg,$md} {
+                font-size: 26px;
+            }
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+
+            &:hover {
+                color: var(--blta-pr-1);
+            }
+        }
+
+
+        .author-img {
+            flex: 0 0 auto;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .item-author {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .author-name {
+            font-size: 16px;
+
+            span {
+                color: #999999;
+            }
+        }
+
+    }
+}
+
+
+.blta-line-1 {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #f2f2f2;
+}
+
+.blta-line-2 {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #1a2127;
+}
+
+
+/* 
+    blog-1-end
+*/
