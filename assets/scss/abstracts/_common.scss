@@ -203,14 +203,19 @@ input:focus::placeholder, textarea:focus::placeholder {
     background-repeat: no-repeat;
 }
 
+.flaticon {
+    display: inline-block;
+    line-height: 0.65;
+}
+
 .z-index-3 {
     position: relative;
     z-index: 3;
 }
 
-.gtb-split-text {
+.blta-split-text {
 	text-transform: unset !important;
-	letter-spacing: -1px;
+	letter-spacing: -.1px;
 	overflow: hidden;
 	.split-line {
 		div {
@@ -221,6 +226,11 @@ input:focus::placeholder, textarea:focus::placeholder {
 			}
 		}
 	}
+}
+
+.blta-ani-threed {
+    perspective: 2000px;
+    transform-style: preserve-3d;
 }
 
 #magnetic-area {

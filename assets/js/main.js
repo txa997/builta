@@ -33,64 +33,25 @@ document.addEventListener("DOMContentLoaded", function () {
 			  }, 1000 ) ;
 		}
 
-		// hero-4slider
-		let glyhero4 = new Swiper('.gly-hero-4-active', {
-			loop: true,
-			rtl: false,
-			speed: 3000,
-			autoplay: {
-			  delay: 5000,
-			},
-			effect: 'fade',
-			fadeEffect: {
-				crossFade: true
-			},
-			navigation: {
-				nextEl: ".gly_h4_next",
-				prevEl: ".gly_h4_prev",
-			},
-			
-		});
-					
-		// class-add
-		const txaaddclass = gsap.utils.toArray('.add-class');
-		txaaddclass.forEach(img => {
-			gsap.to(img, {
-				scrollTrigger: {
-					trigger: img,
-					scrub: 1,
-					start: "top 70%",
-					toggleClass: "active",
-					toggleActions: "play reverse play reverse",
-				}
+		// hero-1-slider
+		if($('.blta-hero-1-active').length) {
+			let hero1 = new Swiper('.blta-hero-1-active', {
+				loop: true,
+				speed: 1000,
+				effect: 'fade',
+				autoplay: {
+					delay: 6000,
+				},
+				fadeEffect: {
+					crossFade: true
+				},
+				navigation: {
+					nextEl: ".blta_hero_1_next",
+					prevEl: ".blta_hero_1_prev",
+				},
 			});
-		});
-
-		// home-1-hero-1-animation
-		const h1tl = gsap.timeline();
-
-		h1tl.from(".h1-fade-up" , { scale: 1.3 ,  y: 100, opacity: 0, stagger: .5, duration:2 });
-		h1tl.fromTo(".gly-hero-1-title .gly-gd-color-1" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}, 
-					{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }, "<1.5"
-		);
-
-		// home-2-hero-2-animation
-		const h2tl = gsap.timeline();
-
-		h2tl.from(".gly-hero-2-il-3" , { y: 200, duration: 1 });
-		h2tl.from(".gly-hero-2-title" , { scale: 1.3 ,  y: 100, opacity: 0, stagger: .5, duration:1 });
-		h2tl.fromTo(".gly-hero-2-title .gly-gd-color-1" , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}, 
-					{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" });
-		h2tl.from(".gly-hero-2-il-2" , {  y: 200,  opacity: 0 });
-		h2tl.from(".gly-hero-2-il-1" , {  y: -200, opacity: 0 });
-		h2tl.from(".gly-project-2-area" , {  y: 200, opacity: 0 });
-
+		}
 		
-		// home-1-hero-1-animation
-		const h3tl = gsap.timeline();
-
-		h3tl.from(".gly-hero-3-demo-row" , { opacity: 1, duration:2 });
-		h3tl.from(".h3-fadebttm" , { y: "-=100", opacity: 0, stagger: .2, duration:1 });
 
 	})
 
@@ -224,45 +185,10 @@ if (menuToggle2) {
 	
 }
 
-// fadeinup-animation-start
-gsap.utils.toArray('.title-ani ').forEach((el, index) => { 
-	let tl1 = gsap.timeline({
-	  scrollTrigger: {
-		trigger: el,
-		scrub: 1,
-		start: "top 90%",
-		end: "buttom 50%",
-		toggleActions: "play none none reverse",
-		 markers: false
-	  }
-	})
-	
-	tl1
-	.from(el, { y: "+=100" , opacity: .8 }, {opacity: 1, scale: 1, y: 0, duration: 1, immediateRender: false})
-  })
 
-  
-// text-clipPath-animation-start
-gsap.utils.toArray('.has-stoke ').forEach((el, index) => { 
-	let tl1 = gsap.timeline({
-	  scrollTrigger: {
-		trigger: el,
-		scrub: 1,
-		start: "top 90%",
-		end: "buttom 60%",
-		toggleActions: "play none none reverse",
-		 markers: false
-	  }
-	})
-	
-	tl1
-	.fromTo(el , { clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)"}, 
-						{        clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" })
-  })
-  
 
 // image-paralax-animation-start
-  gsap.utils.toArray(".image-pllx").forEach(function(container) {
+gsap.utils.toArray(".image-pllx").forEach(function(container) {
     let image = container.querySelector("img");
   
     let tl = gsap.timeline({
@@ -283,44 +209,165 @@ gsap.utils.toArray('.has-stoke ').forEach((el, index) => {
       }); 
   });
 
+// blta-img-animation
+gsap.utils.toArray('.blta-img').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 80%",
+		end: "top 50%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.from(el, { Transform: "rotateY(60deg) translateX(-190px)" }, {opacity: 1, duration: 1, immediateRender: false})
+})
+
+// blta-img-animation-2
+gsap.utils.toArray('.blta-img-2').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 80%",
+		end: "top 50%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.from(el, { Transform: "rotateY(-60deg) translateX(190px)" }, {opacity: 1, duration: 1, immediateRender: false})
+})
+
+// blta-scale-plus
+gsap.utils.toArray('.blta-scale-plus').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 85%",
+		end: "buttom 50%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.from(el, { scale: 2 }, {opacity: 1, duration: 1, immediateRender: false})
+})
+
+// blta-fade-left
+gsap.utils.toArray('.blta-fade-left').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 70%",
+		end: "top 10%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.from(el, { opacity: 1 , xPercent: -100 }, {opacity: 1, duration: 1, immediateRender: false})
+})
+
+// blta-fade-right
+gsap.utils.toArray('.blta-fade-right').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 2,
+		start: "top 70%",
+		end: "top 10%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.from(el, { opacity: 1 , xPercent: 100 }, {opacity: 1, duration: 1, immediateRender: false})
+})
+
+// blta-fade-down
+gsap.utils.toArray('.blta-fade-down img').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: ".blta-fade-down",
+		scrub: 2,
+		start: "top 70%",
+		end: "top 10%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.from(el, { opacity: 1 , yPercent: 100 }, {opacity: 1, duration: 1, immediateRender: false})
+})
+
+// blta-categories-1-img
+var bltact1 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: bltact1,
+	  trigger: '.blta-categories-1-img',
+	  start: "top 80%",
+	  end: "top 30%",
+	  scrub: 2,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+bltact1.from( ".blta-categories-1-img img" , { yPercent: -100 , stagger: 0.2 ,  duration:1 } )
 
 
-// cta-4-animation
-if($('.news5-img').length) {
-	let glyaw3g = gsap.timeline({
-		
+
+
+
+
+
+var st = $(".blta-split-text");
+if(st.length == 0) return;
+gsap.registerPlugin(SplitText);
+st.each(function(index, el) {
+	el.split = new SplitText(el, { 
+		type: "lines,words,chars",
+		linesClass: "split-line"
+	});
+	gsap.set(el, { perspective: 400 });
+
+
+	if( $(el).hasClass('split-in-left') ){
+		gsap.set(el.split.chars, {
+			opacity: 1,
+			color: "#ff6600",
+			x: "-50",
+			ease: "circ.out",
+		});
+	}
+
+	el.anim = gsap.to(el.split.chars, {
 		scrollTrigger: {
-			animation: glyaw3g,
-			trigger: '.news5-img',
-			start: "top 80%",
-			end: "top 30%",
-			scrub: 2,
-			markers: false
-		}
-	});
-	glyaw3g.from( ".news5-img img" , { y: "100%",  duration:1 })
-}
-
-
-// hero-1-slider
-if($('.blta-hero-1-active').length) {
-	let hero1 = new Swiper('.blta-hero-1-active', {
-		loop: true,
-		speed: 500,
-		effect: 'fade',
-		// autoplay: {
-		// 	delay: 5000,
-		// 	},
-		fadeEffect: {
-			crossFade: true
+			trigger: el,
+			start: "top 90%",
 		},
-		navigation: {
-			nextEl: ".blta_hero_1_next",
-			prevEl: ".blta_hero_1_prev",
-		},
+		x: "0",
+		y: "0",
+		rotateX: "0",
+		color: "inherit",
+		scale: 1,
+		opacity: 1,
+		duration: 0.8, 
+		stagger: 0.02,
 	});
-}
-
+});
 
   
 // team-1-active
@@ -449,13 +496,6 @@ $(document).ready(function () {
 
 
 
-
-// price-4-active-class
-$(".gly-price-4-card").on("mouseover", function(){
-var current_class = document.getElementsByClassName("gly-price-4-card active");
-current_class[0].className = current_class[0].className.replace(" active", "");
-this.className += " active";
-});
 
 
 /* faq-active-class */

@@ -28,11 +28,14 @@
                 transform: translateX(-50%);
                 top: 0;
                 z-index: -1;
+                transform-origin: center;
+                transition: 400ms var(--cube-2);
             }
         
             .s1-icon {
                 font-size: 70px;
                 margin-bottom: 35px;
+                transition: 400ms var(--cube-1);
             }
         
             
@@ -46,6 +49,17 @@
 
                 @media #{$sm} {
                     font-size: 26px;
+                }
+            }
+
+            &:hover {
+                &::after {
+                    transform: translateX(-50%) rotate(90deg);
+                    background: #f4f4f4;
+                }
+
+                .s1-icon {
+                    transform: scale(105%);
                 }
             }
         }

@@ -28,6 +28,12 @@
     &-item {
         .main-img {
             height: 290px;
+            overflow: hidden;
+            perspective: 70px;
+            perspective-origin: 50% 50%;
+            img {
+                transition: 400ms ease;
+            }
         }
 
         .content-wrap {
@@ -89,6 +95,14 @@
 
             span {
                 color: #999999;
+            }
+        }
+
+        &:hover {
+            .main-img {
+                img {
+                    transform: scaleX(1) scaleY(1) scaleZ(0.1) rotateX(8deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+                }
             }
         }
 

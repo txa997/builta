@@ -74,6 +74,15 @@
         &-content {
             position: relative;
             z-index: 2;
+            perspective: 2000px;
+            transform-style: preserve-3d;
+
+            .blta-subtitle-1 {
+                transform: rotateY(108deg);
+                transform-origin: left;
+                transition: 1s var(--cube-2);
+                transition-delay: .3s;
+            }
         }
         
 
@@ -81,6 +90,11 @@
             font-size: 70px;
             max-width: 570px;
             margin-bottom: 25px;
+
+            transform: rotateY(108deg);
+            transform-origin: left;
+            transition: 1s var(--cube-2);
+            transition-delay: .5s;
 
             @media #{$xl} {
                 font-size: 65px;
@@ -105,10 +119,21 @@
             line-height: 34px;
             max-width: 580px;
             margin-bottom: 40px;
+            transform: rotateY(108deg);
+            transform-origin: left;
+            transition: 1s var(--cube-2);
 
             @media #{$xl,$lg} {
                 max-width: 50%;
             }
+        }
+
+        &-btn {
+
+            transform: rotateY(108deg);
+            transform-origin: left;
+            transition: 1s var(--cube-2);
+
         }
     }
     
@@ -122,10 +147,34 @@
             .swiper-wrapper {
                 .swiper-slide {
                     &:is(.swiper-slide-active) {
-                        .blta-hero-1-slider-item-img {
-                            transform: translate(0%, 0%);
-                            transition-delay: 1s;
+                        .blta-hero-1-slider-item {
+                            &-img {
+                                transform: translate(0%, 0%);
+                                transition-delay: 1s;
+                            }
+                            &-content {
+                                perspective: 2000px;
+                                transform-style: preserve-3d;
+
+                                .blta-subtitle-1  {
+                                    transform: rotateY(0deg);
+                                }
+                                .blta-hero-1-slider-item-title {
+                                    transform: rotateY(0deg);
+                                    transition-delay: .5s;
+                                }
+                                .blta-hero-1-slider-item-disc {
+                                    transform: rotateY(0deg);
+                                    transition-delay: .8s;
+                                }
+                                .blta-hero-1-slider-item-btn {
+                                    transform: rotateY(0deg);
+                                    transition-delay: 1s;
+                                }
+                                
+                            }
                         }
+                        
                     }
                 }
             }

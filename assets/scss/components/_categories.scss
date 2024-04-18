@@ -47,6 +47,22 @@
                 display: none;
                 width: 34%;
             }
+
+            img {
+                width: 100%;
+            }
+
+            .part-2 {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+
+            .part-3 {
+                position: absolute;
+                left: 0;
+                bottom: -10px;
+            }
         }
 
         &-section-title {

@@ -122,6 +122,17 @@
     }
     .item-link {
         font-size: 21px;
+        transition: 400ms var(--cube-1);
+        &:hover {
+            color: var(--blta-pr-1);
+        }
+    }
+
+    &:hover {
+        .blta-mail-icon-1 {
+            animation: jello 1s;
+            transform-origin: center;
+        }
     }
 }
 .blta-mail-icon-1 {
@@ -130,6 +141,10 @@
     background: var(--blta-pr-1);
     border-radius: 50%;
     font-size: 26px;
+
+    i {
+        display: inline-block;
+    }
 }
 
 /* 

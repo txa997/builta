@@ -1,0 +1,40 @@
+
+@font-face {
+    font-family: "flaticon_blta";
+    src: url("../webfonts/flaticon_blta.woff2?d57245ce21f43f10782847921110cdf3") format("woff2"),
+url("../webfonts/flaticon_blta.woff?d57245ce21f43f10782847921110cdf3") format("woff"),
+url("../webfonts/flaticon_blta.eot?d57245ce21f43f10782847921110cdf3#iefix") format("embedded-opentype"),
+url("../webfonts/flaticon_blta.ttf?d57245ce21f43f10782847921110cdf3") format("truetype"),
+url("../webfonts/flaticon_blta.svg?d57245ce21f43f10782847921110cdf3#flaticon_blta") format("svg")
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_blta !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-mechanic:before {
+    content: "\f101";
+}
+.flaticon-workers:before {
+    content: "\f102";
+}
+.flaticon-construction-worker:before {
+    content: "\f103";
+}
+.flaticon-architect:before {
+    content: "\f104";
+}
+.flaticon-process:before {
+    content: "\f105";
+}
+.flaticon-house:before {
+    content: "\f106";
+}
+
