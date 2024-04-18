@@ -232,3 +232,120 @@
 /* 
     hero-1-css-end
 */
+
+
+/* 
+    hero-2-css-start
+*/
+
+.blta-hero-2 {
+    &-area {
+        position: relative;
+    }
+
+    &-bg-img {
+        position: absolute;
+        background: #000;
+        width: 100%;
+        height: 100%;
+    
+        &-overly {
+            width: 100%;
+            height: 100%;
+            background: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 4;
+            opacity: 50%;
+            z-index: 2;
+        }
+    
+        .bg-plane {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 30%;
+        }
+    
+        .bg-building {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            z-index: 2;
+            
+            img {
+                transform-origin: top;
+            }
+        }
+    }
+
+    &-bg-shape {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+        height: 800px;
+
+        .shape-1 {
+            width: 100%;
+        }
+
+        .shape-2 {
+            position: absolute;
+            right: 8%;
+            bottom: 11%;
+        }
+    }
+    
+}
+
+
+.blta-hero-2 {
+    &-content {
+        padding-top: 340px;
+        padding-bottom: 180px;
+        text-align: right;
+    }
+
+    &-title-3 {
+        font-size: 50px;
+        color: var(--blta-pr-2);
+        margin-bottom: -50px;
+    }
+    &-title-2 {
+        font-size: 160px;
+        margin-bottom: -51px;
+    }
+    &-title-1 {
+        font-size: 180px;
+        color: var(--blta-pr-2);
+        margin-bottom: -10px;
+    }
+    &-disc {
+        font-size: 20px;
+        line-height: 34px;
+        margin-bottom: 25px;
+    }
+    &-btn {
+        padding-right: 52px;
+    }
+
+    &-img {
+        margin-right: -30px;
+        display: flex;
+        justify-content: end;
+        height: 100%;
+        align-items: end;
+    }
+}
+
+
+/* 
+    hero-2-css-end
+*/

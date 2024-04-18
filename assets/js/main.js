@@ -51,6 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
 				},
 			});
 		}
+
+
+		// home-2-hero-2-animation
+		const h2tl = gsap.timeline();
+
+		h2tl.fromTo(".bg-plane" , { xPercent: -100 , yPercent: 150 }, { xPercent: 180, yPercent: -80, duration: 2 });
+		h2tl.from(".bg-building img" , { scale: 2, duration: 1 } , "<1" );
+		h2tl.from(".blta-hero-2-bg-img-overly" , { opacity: 0, duration: .5 }, "<.5" );
 		
 
 	})

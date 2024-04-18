@@ -15,6 +15,7 @@
   --black-color: #000000;
   --white-color: #fff;
   --blta-pr-1: #ff6600;
+  --blta-pr-2: #fa7d09;
   --cube-1: cubic-bezier(.23,1,.32,1);
   --cube-2: cubic-bezier(0.31, -0.105, 0.43, 1.4);
 }
@@ -2929,6 +2930,103 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     hero-1-css-end
+*/
+/* 
+    hero-2-css-start
+*/
+.blta-hero-2-area {
+  position: relative;
+}
+.blta-hero-2-bg-img {
+  position: absolute;
+  background: #000;
+  width: 100%;
+  height: 100%;
+}
+.blta-hero-2-bg-img-overly {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 50%;
+  z-index: 2;
+}
+.blta-hero-2-bg-img .bg-plane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 30%;
+}
+.blta-hero-2-bg-img .bg-building {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 2;
+}
+.blta-hero-2-bg-img .bg-building img {
+  transform-origin: top;
+}
+.blta-hero-2-bg-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  height: 800px;
+}
+.blta-hero-2-bg-shape .shape-1 {
+  width: 100%;
+}
+.blta-hero-2-bg-shape .shape-2 {
+  position: absolute;
+  right: 8%;
+  bottom: 11%;
+}
+
+.blta-hero-2-content {
+  padding-top: 340px;
+  padding-bottom: 180px;
+  text-align: right;
+}
+.blta-hero-2-title-3 {
+  font-size: 50px;
+  color: var(--blta-pr-2);
+  margin-bottom: -50px;
+}
+.blta-hero-2-title-2 {
+  font-size: 160px;
+  margin-bottom: -51px;
+}
+.blta-hero-2-title-1 {
+  font-size: 180px;
+  color: var(--blta-pr-2);
+  margin-bottom: -10px;
+}
+.blta-hero-2-disc {
+  font-size: 20px;
+  line-height: 34px;
+  margin-bottom: 25px;
+}
+.blta-hero-2-btn {
+  padding-right: 52px;
+}
+.blta-hero-2-img {
+  margin-right: -30px;
+  display: flex;
+  justify-content: end;
+  height: 100%;
+  align-items: end;
+}
+
+/* 
+    hero-2-css-end
 */
 /* 
     services-1-start
