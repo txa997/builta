@@ -304,6 +304,77 @@
 
 
 
+/* 
+  header-1-css-end
+*/
+
+/* 
+  header-2-css-start
+*/
+.blta-header-2 {
+  &-area {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 30px;
+    background: transparent;
+    z-index: 8;
+  }
+
+  &-container {
+    max-width: 1745px;
+  }
+
+  &-action-link {
+    .gly-mobile-menu-btn-1 {
+      background: #000;
+      width: 55px;
+      height: 60px;
+      padding: 25px 15px;
+    }
+  }
+}
+
+
+.main-navigation {
+  &:is(.has-home-2) {
+    .navbar-nav {
+      li {
+        &:not(:last-child) {
+          margin-right: 55px;
+
+          @media #{$lg} {
+            margin-right: 18px;
+          }
+        }
+
+        a {
+          font-family: var(--blta-pr-font);
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        .dropdown-menu {
+          li {
+            margin-right: 0;
+
+            a {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 
+  header-2-css-end
+*/
+
+
+
+
 
 
 

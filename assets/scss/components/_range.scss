@@ -116,3 +116,131 @@
 /* 
     range-1-end
 */
+
+/* 
+    range-2-start
+*/
+.blta-range-2 {
+    &-area {
+        position: relative;
+        z-index: 1;
+    }
+    &-bg-img {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: -1;
+    }
+
+    &-item {
+        position: relative;
+        z-index: 1;
+
+        .item-img {
+            max-width: 1080px;
+            margin-left: auto;
+            height: 640px;
+            position: relative;
+            z-index: 1;
+
+            &::after {
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,212,255,0) 100%);
+                opacity: .9;
+            }
+        }
+
+
+        .content {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            max-width: 510px;
+        }
+
+        .blta-section-title-1 {
+            font-size: 75px;
+            
+            @media #{$xxl} {
+                font-size: 65px;
+            }
+
+            @media #{$xl} {
+                font-size: 55px;
+            }
+            @media #{$lg} {
+                font-size: 45px;
+            }
+            @media #{$md} {
+                font-size: 40px;
+            }
+            @media #{$xs} {
+                font-size: 30px;
+            }
+            @media #{$sm} {
+                font-size: 35px;
+            }
+        }
+
+        .blta-para-1 {
+            margin-bottom: 40px;
+        }
+
+        .play-btn {
+            display: inline-block;
+            width: 77px;
+            height: 77px;
+            background: var(--blta-pr-2);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 85px;
+            font-size: 32px;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        .blta-subtitle-1 {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 600ms var(--cube-2);
+        }
+
+        .play-btn {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 600ms var(--cube-2);
+        }
+
+        .blta-para-1 {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 600ms var(--cube-2);
+        }
+
+        .blta-section-title-1 {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 600ms var(--cube-2);
+        }
+
+        .btn-wrap {
+            transform: translateY(100px);
+            opacity: 0;
+            transition: 600ms var(--cube-2);
+        }
+    }
+    
+
+}
+/* 
+    range-2-end
+*/

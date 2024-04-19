@@ -59,6 +59,13 @@ document.addEventListener("DOMContentLoaded", function () {
 		h2tl.fromTo(".bg-plane" , { xPercent: -100 , yPercent: 150 }, { xPercent: 180, yPercent: -80, duration: 2 });
 		h2tl.from(".bg-building img" , { scale: 2, duration: 1 } , "<1" );
 		h2tl.from(".blta-hero-2-bg-img-overly" , { opacity: 0, duration: .5 }, "<.5" );
+		h2tl.from(".blta-hero-2-bg-shape " , { xPercent: -100, duration: .5 }, "<.5" );
+		h2tl.from(".blta-hero-2-title-3" , { Transform: "rotateY(81deg)" }, "<.5" );
+		h2tl.from(".blta-hero-2-title-2" , { Transform: "rotateY(81deg)"  }, "<.5" );
+		h2tl.from(".blta-hero-2-title-1" , { Transform: "rotateY(81deg)"  }, "<.5" );
+		h2tl.from(".blta-hero-2-disc" , { Transform: "rotateY(81deg)"  }, "<.5" );
+		h2tl.from(".blta-hero-2-btn" , { Transform: "rotateY(81deg)"  }, "<.5" );
+		h2tl.from(".blta-hero-2-img img" , { yPercent: 100 , duration: 1 }, "<.5" );
 		
 
 	})
@@ -318,6 +325,22 @@ gsap.utils.toArray('.blta-fade-down img').forEach((el, index) => {
 	tl1
 	.from(el, { opacity: 1 , yPercent: 100 }, {opacity: 1, duration: 1, immediateRender: false})
 })
+
+// hero-2-animation
+var bltahro2 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: bltahro2,
+	  trigger: '.blta-hero-2-area',
+	  start: "top 100%",
+	  end: "bottom 0%",
+	  scrub: 2,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+bltahro2.from( ".blta-hero-2-bg-img .bg-building" , { scale: 2 ,  duration:1 } )
 
 // blta-categories-1-img
 var bltact1 = gsap.timeline({

@@ -1,5 +1,9 @@
 @use '../abstracts/variables' as *;
 
+/* 
+    about-1-start
+*/
+
 .blta-about {
     &-1 {
         &-section-title {
@@ -81,5 +85,185 @@
     
 }
 
+/* 
+    about-1-end
+*/
 
+/* 
+    about-2-start
+*/
+.blta-about-2 {
+    &-left-grid {
+        display: grid; 
+        grid-template-columns: 1.1fr 0.8fr 1.1fr; 
+        grid-template-rows: 1fr .9fr .8fr 1fr;
+        padding-right: 40px;
+
+        @media #{$xl,$lg,$md} {
+            padding-right: 0px;
+        }
+
+        @media #{$xs} {
+            padding-right: 0px;
+            gap: 15px;
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr 1fr auto; 
+            grid-template-areas: 
+                    "item-1"
+                    "item-2"
+                    "item-3"; 
+        }
+
+        @media #{$sm} {
+            gap: 0px;
+            padding-right: 0px;
+            grid-template-columns: 1.1fr 0.8fr 1.1fr; 
+            grid-template-rows: 1fr .9fr .8fr 1fr;
+        }
+
+        .item-1 { 
+            grid-area: 1 / 2 / 4 / 4; 
+
+            @media #{$xs} {
+                grid-area: item-1;
+            }
+    
+            @media #{$sm} {
+                grid-area: 1 / 2 / 4 / 4; 
+            }
+        }
+        .item-2 { 
+            grid-area: 2 / 1 / 5 / 3; 
+            
+            @media #{$xs} {
+                grid-area: item-2;
+            }
+    
+            @media #{$sm} {
+                grid-area: 2 / 1 / 5 / 3; 
+            }
+        }
+        .item-3 { 
+            grid-area: 4 / 3 / 5 / 4; 
+            @media #{$xs} {
+                grid-area: item-3;
+            }
+    
+            @media #{$sm} {
+                grid-area: 4 / 3 / 5 / 4; 
+            }
+        }
+    }
+
+    &-img {
+        height: 475px;
+        padding: 20px;
+        border: 2px #E7E5E5;
+        border-style: dashed;
+        background: #fff;
+
+        @media #{$xs} {
+            height: 375px;
+        }
+
+        @media #{$sm} {
+            height: 475px;
+        }
+
+        &:nth-child(1) {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    &-happy-customer {
+        font-size: 80px;
+        display: flex;
+        align-items: center;
+        color: var(--blta-pr-2);
+
+        @media #{$xl,$lg,$md,$xs} {
+            font-size: 50px;
+        }
+
+
+        .text {
+            display: inline-block;
+            font-size: 22px;
+            padding-left: 15px;
+            color: #000;
+        }
+    }
+
+    &-content {
+        margin-right: -50px;
+        padding-top: 20px;
+
+        @media #{$xxl,$xl} {
+            margin-right: 0px;
+        }
+
+        @media #{$lg,$md,$xs} {
+            margin-right: 0px;
+            padding-top: 50px;
+        }
+
+        .inner-div {
+            gap: 35px;
+
+            @media #{$xs} {
+               flex-wrap: wrap; 
+            }
+
+            @media #{$sm} {
+               flex-wrap: nowrap; 
+            }
+        }
+
+        .blta-ply-btn-1 {
+            width: 160px;
+            height: 160px;
+            &-svg {
+                font-size: 23px;
+                width: 90%;
+            }
+
+            &-icon-home {
+                width: 60px;
+                height: 60px;
+                background: #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: #fff;
+            }
+        }
+
+        .blta-list-1 {
+            &-title {
+                color: #000;
+            }
+            &-item {
+                padding-left: 25px;
+                &::after {
+                    width: 12px;
+                    height: 12px;
+                    border: 2px solid #444444;
+                    top: 8px;
+                }
+            }
+        }
+    }
+    
+    &-btn {
+        gap: 30px;
+        .blta-btn-2 {
+            margin-right: 52px;
+        }
+    }
+}
+/* 
+    about-2-end
+*/
 

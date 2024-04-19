@@ -69,3 +69,143 @@
 /* 
     services-1-end
 */
+
+/* 
+    services-2-start
+*/
+.blta-services-2 {
+
+    &-area {
+        position: relative;
+        z-index: 1;
+    }
+
+    &-il-1 {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 41%;
+
+    }
+
+    &-section-title {
+        .icon {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: #000;
+            border-radius: 50%;
+            line-height: 35px;
+            font-size: 20px;
+            color: #fff;
+        }
+        .blta-subtitle-1 {
+            justify-content: center;
+            color: #444444;
+        }
+    }
+
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    
+    &-card {
+        background: #fff;
+        border-bottom: 1px solid #CECECE;
+        border-right: 1px solid #CECECE;
+        padding: 55px 75px;
+
+
+
+  
+
+        @media #{$xl} {
+            padding: 55px 45px;
+
+        }
+
+        @media #{$lg,$md} {
+            padding: 55px 25px;
+        }
+
+        @media #{$xs} {
+            padding: 55px 25px;
+            border: 1px solid #CECECE;
+        }
+
+        @media #{$sm} {
+            padding: 55px 25px;
+            border-bottom: 1px solid #CECECE;
+            border-right: 1px solid #CECECE;
+        }
+
+        &:nth-child(1) {
+            border-left: 1px solid #CECECE;
+            border-top: 1px solid #CECECE;
+        }
+
+        &:nth-child(2) {
+            border-top: 1px solid #CECECE;
+        }
+
+        &:nth-child(3) {
+            border-top: none;
+            border-right: none;
+            border-left: 1px solid #CECECE;
+        }
+
+        &:nth-child(4) {
+            border-left: 1px solid #CECECE;
+        }
+
+        &:nth-child(5) {
+            border-left: 1px solid #CECECE;
+        }
+
+        .card-title {
+            display: flex;
+            font-size: 28px;
+            gap: 15px;
+            align-items: center;
+            margin-bottom: 25px;
+            
+            i {
+                font-size: 70px;
+                @media #{$xs} {
+                    font-size: 40px;
+                }
+            }
+
+            @media #{$xs} {
+                font-size: 22px;
+            }
+        }
+
+        .card-para {
+            line-height: 28px;
+        }
+
+        &:hover {
+            .card-title {
+                i {
+                    animation: jello 1s;
+                }
+            }
+        }
+    }
+}
+
+/* 
+    services-2-end
+*/
