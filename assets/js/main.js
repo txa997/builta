@@ -258,6 +258,23 @@ gsap.utils.toArray('.blta-img-2').forEach((el, index) => {
 	.from(el, { Transform: "rotateY(-60deg) translateX(190px)" }, {opacity: 1, duration: 1, immediateRender: false})
 })
 
+// blta-img-animation-2
+gsap.utils.toArray('.blta-img-3').forEach((el, index) => { 
+	let tl1 = gsap.timeline({
+	  scrollTrigger: {
+		trigger: el,
+		scrub: 1,
+		start: "top 80%",
+		end: "top 50%",
+		toggleActions: "play none none reverse",
+		 markers: false
+	  }
+	})
+	
+	tl1
+	.from(el, { Transform: "rotateX(-60deg) translateY(190px)" }, {opacity: 1, duration: 1, immediateRender: false})
+})
+
 // blta-scale-plus
 gsap.utils.toArray('.blta-scale-plus').forEach((el, index) => { 
 	let tl1 = gsap.timeline({
@@ -479,6 +496,72 @@ let range1 = new Swiper('.range-1-active', {
 		nextEl: ".range_1_next",
 		prevEl: ".range_1_prev",
 	},
+});
+
+
+// range-1-active
+let bltarange2 = new Swiper('.range-2-active', {
+	loop: true,
+	spaceBetween: 0,
+	slidesPerView: 1,
+	speed: 2000,
+	autoplay: {
+		delay: 5000,
+	},
+	navigation: {
+		nextEl: ".range_2_next",
+		prevEl: ".range_2_prev",
+	},
+});
+
+
+// range-1-active
+let bltateam2 = new Swiper('.team-2-active', {
+	loop: true,
+	spaceBetween: 0,
+	speed: 1000,
+	slidesPerView: 2,
+	autoplay: {
+		delay: 5000,
+	},
+	navigation: {
+		nextEl: ".team_2_next",
+		prevEl: ".team_2_prev",
+	},
+
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 1,
+		},
+		992: {
+			slidesPerView: 2,
+		},
+	},
+});
+
+
+// testimonial-1-active
+let bltatestimonial1 = new Swiper('.testimonial-2-active', {
+	loop: true,
+	spaceBetween: 0,
+	speed: 1000,
+	slidesPerView: 1,
+	autoplay: {
+		delay: 5000,
+	},
+
+	pagination: {
+		el: ".testimonial-2-pagination",
+		clickable: true,
+	
+	},
+
 });
 
 

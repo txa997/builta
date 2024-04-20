@@ -52,6 +52,56 @@
 }
 
 
+
+
 /* 
     client-1-end
+*/
+
+
+/* 
+    client-2-start
+*/
+.blta-client-2 {
+    &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 30px;
+        perspective: 2000px;
+        transform-style: preserve-3d;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+     &-item {
+        padding: 15px;
+        height: 175px;
+        background: #faf9f7;
+        transition: 1000ms var(--cube-2);
+
+    }
+
+    &-item-hover {
+        &:hover {
+            .blta-client-2-item {
+                background: var(--blta-pr-2);
+                transform: rotateY(360deg);
+            }
+        }
+    }
+    
+}
+
+/* 
+    client-2-end
 */

@@ -218,6 +218,11 @@
             transform: translateY(100px);
             opacity: 0;
             transition: 600ms var(--cube-2);
+            transition-delay: .6s;
+
+            &:hover {
+                animation: jello 1s;
+            }
         }
 
         .blta-para-1 {
@@ -239,6 +244,61 @@
         }
     }
     
+    &-slider {
+        position: relative;
+        z-index: 1;
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &:is(.swiper-slide-active) {
+                        .blta-range-2-item {
+                            .play-btn {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                            .blta-subtitle-1  {
+                                opacity: 1;
+                                transform: translateY(0);
+                                transition-delay: .3s;
+                            }
+                            .blta-section-title-1  {
+                                opacity: 1;
+                                transform: translateY(0);
+                                transition-delay: .4s;
+                            }
+                            .blta-para-1  {
+                                opacity: 1;
+                                transform: translateY(0);
+                                transition-delay: .5s;
+                            }
+                            .btn-wrap  {
+                                opacity: 1;
+                                transform: translateY(0);
+                                transition-delay: .6s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-btn {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
+            z-index: 1;
+            gap: 20px;
+
+            @media #{$xs} {
+                right: 20px;
+                bottom: 20px; 
+            }
+
+            .blta-slider-btn-1 {
+                border: 1px solid #ffffff4a;
+            }
+        }
+    }
 
 }
 /* 

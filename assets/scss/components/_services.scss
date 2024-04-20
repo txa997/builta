@@ -160,9 +160,7 @@
         }
 
         &:nth-child(3) {
-            border-top: none;
-            border-right: none;
-            border-left: 1px solid #CECECE;
+            border-top: 1px solid #CECECE;
         }
 
         &:nth-child(4) {
@@ -208,4 +206,101 @@
 
 /* 
     services-2-end
+*/
+
+/* 
+    services-3-start
+*/
+
+.blta-services-3 {
+    &-section-title {
+        max-width: 785px;
+        margin-left: auto;
+        margin-right: auto;
+        .icon {
+            width: 80px;
+            height: 80px;
+            display: inline-flex;
+            background: #000;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 35px;
+        }
+    }
+
+    &-card {
+        margin-bottom: 30px;
+
+        .card-img {
+            height: 335px;
+            perspective: 70px;
+            perspective-origin: 50% 50%;
+            
+            img {
+                transition: .6s;
+            }
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 28px 10px;
+            box-shadow: 0px 16px 46px 0px rgba(0, 0, 0, 0.03);
+            margin-top: -40px;
+            position: relative;
+            z-index: 1;
+            max-width: 88%;
+            margin-left: auto;
+            margin-right: auto;
+
+            transition: 500ms ;
+        }
+
+        .card-title {
+            font-size: 28px;
+            line-height: 1.28;
+            transition: 500ms var(--cube-1);
+
+            @media #{$lg,$md,$xs} {
+                font-size: 22px; 
+            }
+
+            &:hover {
+                letter-spacing: .5px;
+                color: var(--blta-pr-2);
+            }
+        }
+
+        .icon {
+            font-size: 50px;
+            color: #010101;
+            transition: 500ms var(--cube-1);
+        }
+
+
+        &:hover {
+            .content {
+                max-width: 100%;
+            }
+
+            .card-img {
+                img {
+                    transform: scaleX(1) scaleY(1) scaleZ(0.1) rotateX(8deg) rotateY(0deg) rotateZ(0deg) translateX(0px) translateY(0px) translateZ(0px) skewX(0deg) skewY(0deg);
+                }
+            }
+
+            .icon {
+                color: var(--blta-pr-2);
+            }
+
+
+        }
+
+    }
+}
+
+
+/* 
+    services-3-end
 */
