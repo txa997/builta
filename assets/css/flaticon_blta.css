@@ -19,22 +19,63 @@ i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
     -moz-osx-font-smoothing: grayscale;
 }
 
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon_blta !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 .flaticon-mechanic:before {
     content: "\f101";
 }
 .flaticon-workers:before {
     content: "\f102";
 }
-.flaticon-construction-worker:before {
+.flaticon-blueprint:before {
     content: "\f103";
 }
-.flaticon-architect:before {
+.flaticon-house-1:before {
     content: "\f104";
 }
-.flaticon-process:before {
+.flaticon-construction-worker:before {
     content: "\f105";
 }
-.flaticon-house:before {
+.flaticon-market:before {
     content: "\f106";
+}
+.flaticon-home:before {
+    content: "\f107";
+}
+.flaticon-architect:before {
+    content: "\f108";
+}
+.flaticon-helmet:before {
+    content: "\f109";
+}
+.flaticon-construction:before {
+    content: "\f10a";
+}
+.flaticon-process:before {
+    content: "\f10b";
+}
+.flaticon-buildings:before {
+    content: "\f10c";
+}
+.flaticon-house:before {
+    content: "\f10d";
+}
+.flaticon-building-1:before {
+    content: "\f10e";
+}
+.flaticon-skyline:before {
+    content: "\f10f";
+}
+.flaticon-building:before {
+    content: "\f110";
 }
 

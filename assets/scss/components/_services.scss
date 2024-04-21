@@ -127,49 +127,50 @@
         padding: 55px 75px;
 
 
-
-  
-
         @media #{$xl} {
             padding: 55px 45px;
 
         }
 
-        @media #{$lg,$md} {
+        @media #{$lg} {
             padding: 55px 25px;
         }
 
-        @media #{$xs} {
+        @media #{$md,$xs} {
             padding: 55px 25px;
-            border: 1px solid #CECECE;
+            border-top: 1px solid #CECECE;
+            border-left: 1px solid #CECECE;
         }
 
-        @media #{$sm} {
-            padding: 55px 25px;
-            border-bottom: 1px solid #CECECE;
-            border-right: 1px solid #CECECE;
-        }
 
         &:nth-child(1) {
-            border-left: 1px solid #CECECE;
-            border-top: 1px solid #CECECE;
+            @media #{$over,$xxxl,$xxl,$xl,$lg} {
+                border-left: 1px solid #CECECE;
+                border-top: 1px solid #CECECE;
+            }
         }
 
         &:nth-child(2) {
-            border-top: 1px solid #CECECE;
+            @media #{$over,$xxxl,$xxl,$xl,$lg} {
+                border-top: 1px solid #CECECE;
+            }
+
         }
 
         &:nth-child(3) {
-            border-top: 1px solid #CECECE;
+            @media #{$over,$xxxl,$xxl,$xl,$lg} {
+                border-top: 1px solid #CECECE;
+            }
+
         }
 
         &:nth-child(4) {
-            border-left: 1px solid #CECECE;
+            @media #{$over,$xxxl,$xxl,$xl,$lg} {
+                border-left: 1px solid #CECECE;
+            }
+
         }
 
-        &:nth-child(5) {
-            border-left: 1px solid #CECECE;
-        }
 
         .card-title {
             display: flex;

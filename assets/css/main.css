@@ -3332,39 +3332,38 @@ input:focus::placeholder, textarea:focus::placeholder {
     padding: 55px 45px;
   }
 }
-@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
   .blta-services-2-card {
     padding: 55px 25px;
   }
 }
-@media (max-width: 767px) {
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .blta-services-2-card {
     padding: 55px 25px;
-    border: 1px solid #CECECE;
+    border-top: 1px solid #CECECE;
+    border-left: 1px solid #CECECE;
   }
 }
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .blta-services-2-card {
-    padding: 55px 25px;
-    border-bottom: 1px solid #CECECE;
-    border-right: 1px solid #CECECE;
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blta-services-2-card:nth-child(1) {
+    border-left: 1px solid #CECECE;
+    border-top: 1px solid #CECECE;
   }
 }
-.blta-services-2-card:nth-child(1) {
-  border-left: 1px solid #CECECE;
-  border-top: 1px solid #CECECE;
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blta-services-2-card:nth-child(2) {
+    border-top: 1px solid #CECECE;
+  }
 }
-.blta-services-2-card:nth-child(2) {
-  border-top: 1px solid #CECECE;
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blta-services-2-card:nth-child(3) {
+    border-top: 1px solid #CECECE;
+  }
 }
-.blta-services-2-card:nth-child(3) {
-  border-top: 1px solid #CECECE;
-}
-.blta-services-2-card:nth-child(4) {
-  border-left: 1px solid #CECECE;
-}
-.blta-services-2-card:nth-child(5) {
-  border-left: 1px solid #CECECE;
+@media (min-width: 1800px), only screen and (min-width: 1600px) and (max-width: 1799px), only screen and (min-width: 1400px) and (max-width: 1599px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blta-services-2-card:nth-child(4) {
+    border-left: 1px solid #CECECE;
+  }
 }
 .blta-services-2-card .card-title {
   display: flex;
@@ -3900,6 +3899,191 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     categories-end
+*/
+/* 
+    categories-2-start
+*/
+.blta-categories-2-area {
+  position: relative;
+  z-index: 1;
+  padding-top: 220px;
+  margin-top: -120px;
+  padding-bottom: 75px;
+}
+.blta-categories-2-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.blta-categories-2-il {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  left: 0;
+  width: 47%;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .blta-categories-2-il {
+    display: none;
+  }
+}
+.blta-categories-2-section-title .icon {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background: var(--blta-pr-2);
+  border-radius: 50%;
+  line-height: 35px;
+  font-size: 20px;
+  color: #fff;
+}
+.blta-categories-2-section-title .blta-subtitle-1 {
+  justify-content: center;
+}
+.blta-categories-2-wrap {
+  display: flex;
+  gap: 80px;
+  margin-top: 50px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blta-categories-2-wrap {
+    gap: 65px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .blta-categories-2-wrap {
+    flex-direction: column;
+  }
+}
+.blta-categories-2-left {
+  padding-left: 120px;
+  padding-right: 20px;
+  position: relative;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blta-categories-2-left {
+    padding-left: 0px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .blta-categories-2-left {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 50px;
+  }
+}
+.blta-categories-2-img {
+  height: 535px;
+  clip-path: polygon(93% 0, 100% 5%, 100% 77%, 75% 100%, 0 100%, 0 0);
+}
+.blta-categories-2-pop-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  background-color: var(--blta-pr-2);
+  padding: 23px 30px;
+  padding-left: 100px;
+  right: -10px;
+  bottom: 30px;
+  font-size: 20px;
+  line-height: 25px;
+  max-width: 330px;
+  z-index: 2;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .blta-categories-2-pop-card {
+    right: 0px;
+  }
+}
+.blta-categories-2-pop-card::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 80px;
+  background-color: #181818;
+  left: 0px;
+  top: 0;
+}
+.blta-categories-2-right {
+  padding-left: 45px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .blta-categories-2-right {
+    padding-left: 0px;
+  }
+}
+.blta-categories-2-tabs-btn {
+  gap: 25px;
+}
+.blta-categories-2-tabs-btn .tabs-btn {
+  font-size: 20px;
+  color: #cbcbcb;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: relative;
+  padding: 0;
+  transition: 400ms var(--cube-1);
+}
+.blta-categories-2-tabs-btn .tabs-btn::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  background-color: var(--blta-pr-2);
+  bottom: 0px;
+  left: 0;
+  transition: 0.4s var(--cube-2);
+}
+.blta-categories-2-tabs-btn .tabs-btn:hover {
+  color: var(--blta-pr-2);
+}
+.blta-categories-2-tabs-btn .tabs-btn:is(.active) {
+  color: var(--blta-pr-2);
+}
+.blta-categories-2-tabs-btn .tabs-btn:is(.active)::after {
+  width: 100%;
+}
+.blta-categories-2-tabs-content .item-disc {
+  color: #cbcbcb;
+  margin-bottom: 30px;
+}
+.blta-categories-2-tabs-content .blta-list-1 {
+  margin-bottom: 20px;
+}
+.blta-categories-2-tabs-content .blta-list-1-title {
+  font-size: 30px;
+}
+.blta-categories-2-tabs-content .blta-list-1-item {
+  color: #fff;
+}
+.blta-categories-2-counter-flex {
+  flex-wrap: wrap;
+  gap: 30px 85px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .blta-categories-2-counter-flex {
+    gap: 30px 35px;
+  }
+}
+.blta-categories-2-counter-item .item-title {
+  font-size: 100px;
+  color: var(--blta-pr-2);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .blta-categories-2-counter-item .item-title {
+    font-size: 50px;
+  }
+}
+.blta-categories-2-counter-item .item-para {
+  font-size: 24px;
+}
+
+/* 
+    categories-2-end
 */
 /* 
     project-1-start
@@ -5142,6 +5326,100 @@ input:focus::placeholder, textarea:focus::placeholder {
     price-1-end
 */
 /* 
+    price-2-start
+*/
+.blta-price-2-area {
+  position: relative;
+  z-index: 2;
+  background: transparent;
+}
+.blta-price-2-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 120px);
+  z-index: -1;
+}
+.blta-price-2-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .blta-price-2-grid {
+    gap: 30px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px) {
+  .blta-price-2-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .blta-price-2-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+}
+.blta-price-2-card {
+  padding: 48px 40px;
+  background-color: #fff;
+  z-index: 2;
+}
+@media (max-width: 767px) {
+  .blta-price-2-card {
+    padding: 35px 30px;
+  }
+}
+.blta-price-2-card .card-img {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
+.blta-price-2-card .card-img img {
+  transition: 400ms var(--cube-2);
+}
+.blta-price-2-card .card-price {
+  font-size: 70px;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  font-family: var(--blta-para-font);
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px) {
+  .blta-price-2-card .card-price {
+    gap: 20px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .blta-price-2-card .card-price {
+    gap: 20px;
+    font-size: 50px;
+  }
+}
+.blta-price-2-card .card-price span {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 22px;
+  text-decoration: underline;
+}
+.blta-price-2-card .card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.blta-price-2-card .card-disc {
+  margin-bottom: 30px;
+}
+.blta-price-2-card:hover .card-img img {
+  transform-origin: 15% 86%;
+  transform: rotateX(12deg) rotateY(14deg) rotateZ(-3deg);
+}
+
+/* 
+    price-2-end
+*/
+/* 
     blog-1-start
 */
 .blta-blog-1-row {
@@ -5480,6 +5758,39 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     testimonial-1-end
+*/
+/* 
+    cta-1-start
+*/
+.blta-cta-2-area {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  background-attachment: fixed;
+}
+.blta-cta-2-content {
+  max-width: 600px;
+}
+.blta-cta-2-content .subtitle {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+@media (max-width: 767px) {
+  .blta-cta-2-content .subtitle {
+    font-size: 22px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .blta-cta-2-content .subtitle {
+    font-size: 26px;
+  }
+}
+.blta-cta-2-content .blta-section-title-1 {
+  padding-bottom: 6px;
+}
+
+/* 
+    cta-1-end
 */
 /* 
     footer-1-start

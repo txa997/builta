@@ -252,3 +252,108 @@
 /* 
     price-1-end
 */
+
+/* 
+    price-2-start
+*/
+
+.blta-price-2 {
+    &-area {
+        position: relative;
+        z-index: 2;
+        background: transparent;
+    }
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 120px);
+        z-index: -1;
+    }
+
+
+
+    &-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+        @media #{$xl} {
+            gap: 30px;
+        }
+        @media #{$lg, $md} {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        @media #{$xs} {
+            grid-template-columns: repeat(1, 1fr);
+            gap: 30px;
+        }
+    }
+
+    &-card {
+        padding: 48px 40px;
+        background-color: #fff;
+        z-index: 2;
+
+        @media #{$xs} {
+            padding: 35px 30px;
+        }
+
+        .card-img {
+            perspective: 2000px;
+            transform-style: preserve-3d;
+            img {
+                transition: 400ms var(--cube-2);
+            }
+        }
+
+        .card-price {
+            font-size: 70px;
+            display: flex;
+            align-items: center;
+            gap: 45px;
+            font-family: var(--blta-para-font);
+
+            @media #{$xl,$lg} {
+                gap: 20px;
+            }
+
+            @media #{$md,$xs} {
+                gap: 20px;
+                font-size: 50px;
+            }
+
+            span {
+                display: inline-block;
+                font-size: 15px;
+                line-height: 22px;
+                text-decoration: underline;
+            }
+        }
+
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card-disc {
+            margin-bottom: 30px;
+        }
+
+        &:hover {
+            .card-img {
+                img {
+                    transform-origin: 15% 86%;
+                    transform: rotateX(12deg) rotateY(14deg) rotateZ(-3deg);
+                }
+            }
+        }
+    }
+}
+
+
+/* 
+    price-2-end
+*/
