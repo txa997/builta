@@ -439,3 +439,313 @@
 /* 
     hero-2-css-end
 */
+
+/* 
+    hero-3-css-start
+*/
+.blta-hero-3 {
+
+    &-area {
+        position: relative;
+        z-index: 1;
+    }
+
+    &-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 100px);
+        z-index: -1;
+    }
+
+    &-item {
+
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            width: 3200px;
+            height: 2px;
+            content: "";
+            background: #3a3c41;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: left;
+            transition: .5s;
+            z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+
+        &-row {
+            display: grid;
+            gap: 60px;
+            grid-template-columns: 1fr 1.2fr;
+
+            @media #{$lg} {
+                gap: 0px;
+            }
+            @media #{$md,$xs} {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-content {
+            padding-top: 110px;
+            perspective: 2000px;
+            transform-style: preserve-3d;
+
+            @media #{$xl,$lg} {
+                padding-top: 50px;
+            }
+
+            @media #{$md,$xs} {
+                padding-top: 0px;
+            }
+
+            .item-subtitle {
+                font-size: 20px;
+                margin-bottom: 12px;
+
+                transform: rotateY(108deg);
+                transform-origin: left;
+                transition: 1s var(--cube-2);
+                opacity: 0;
+            }
+
+            .item-title {
+                font-size: 80px;
+                line-height: 1.06;
+                margin-bottom: 23px;
+
+                transform: rotateY(108deg);
+                transform-origin: left;
+                transition: 1s var(--cube-2);
+                opacity: 0;
+
+
+                @media #{$xl} {
+                    font-size: 65px;
+                }
+    
+                @media #{$lg} {
+                    font-size: 60px;
+                }
+                @media #{$md} {
+                    font-size: 50px;
+                }
+                @media #{$xs} {
+                    font-size: 40px;
+                }
+                @media #{$sm} {
+                    font-size: 45px;
+                }
+    
+            }
+
+            .item-disc {
+                font-size: 20px;
+                line-height: 34px;
+                color: #222429;
+                margin-bottom: 39px;
+
+                transform: rotateY(108deg);
+                transform-origin: left;
+                transition: 1s var(--cube-2);
+                opacity: 0;
+            }
+
+            .item-btn {
+                transform: rotateY(108deg);
+                transform-origin: left;
+                transition: 1s var(--cube-2);
+   
+                opacity: 0;
+            }
+        }
+
+        &-right {
+            position: relative;
+            z-index: 1;
+
+        }
+
+        &-img {
+            height: 785px;
+            display: flex;
+            align-items: end;
+            margin-right: -260px;
+
+            transition: 1s;
+            transform:  translateX(50%);
+            opacity: 0;
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+
+
+            @media #{$xxxl} {
+                height: 700px;
+                margin-right: -120px;
+            }
+
+            @media #{$xxl} {
+                height: 580px;
+                margin-right: 0px;
+            }
+
+            @media #{$xl} {
+                height: 580px;
+                margin-right: 0px;
+            }
+            @media #{$lg} {
+                height: 600px;
+                margin-right: 0px;
+            }
+            @media #{$md,$xs} {
+                height: auto;
+                margin-right: 0px;
+            }
+        }
+
+
+        &-modal {
+            background: var(--blta-pr-2);
+            max-width: 350px;
+            padding: 27px 30px;
+            padding-right: 70px;
+            position: absolute;
+            right: -200px;
+            bottom: 30px;
+
+            transition: .5s;
+            opacity: 0;
+            
+            @media #{$xs} {
+                display: none;
+            }
+
+            .title {
+                font-size: 25px;
+                line-height: 1.4;
+                margin-bottom: 13px;
+            }
+
+            .modal-btn {
+                width: 60px;
+                height: 54px;
+                background: #101010;
+                color: #fff;
+                transition: 500ms var(--cube-1);
+
+                &:hover {
+                    border-radius: 50%;
+                }
+            }
+
+            .modal-img {
+                position: absolute;
+                bottom: -30px;
+                right: -30px;
+                width: 50%;
+
+            }
+        }
+
+    }
+
+    &-slider {
+
+        position: relative;
+        z-index: 1;
+
+
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+
+                    &:is(.swiper-slide-active) {
+                        .blta-hero-3-item {
+                            &::after {
+                                transform: translateX(-50%) scaleX(1);
+                                transition: 12s;
+                            }
+
+                            &-content {
+                                perspective: 2000px;
+                                transform-style: preserve-3d;
+
+                                .item-subtitle  {
+                                    transform: rotateY(0deg);
+                                    opacity: 1;
+                                }
+                                .item-title {
+                                    transform: rotateY(0deg);
+                                    transition-delay: .5s;
+                                    opacity: 1;
+                                }
+                                .item-disc {
+                                    transform: rotateY(0deg);
+                                    transition-delay: .8s;
+                                    opacity: 1;
+                                }
+                                .item-btn {
+                                    transform: rotateY(0deg);
+                                    transition-delay: 1s;
+                                    opacity: 1;
+                                }
+                            }
+
+                            &-img {
+                                transform: translateX(0px);
+                                transition: 2s;
+                                transition-delay: .5s;
+                                opacity: 1;
+                                clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+                           
+                            }
+
+                            &-modal {
+                                right: 0;
+                                transition-delay: 2s;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &-btn {
+            position: absolute;
+            z-index: 1;
+            left: 35%;
+            bottom: 74px;
+            transform: translateX(-50%);
+            gap: 10px;
+
+            @media #{$md,$xs} {
+                left: 0;
+                transform: unset;
+            }
+            
+            .blta-slider-btn-1  {
+                background-color: #fff;
+                border-color: #828282;
+                color: #101010;
+
+                &:hover {
+                    background-color: var(--blta-pr-2);
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+}
+/* 
+    hero-3-css-end
+*/

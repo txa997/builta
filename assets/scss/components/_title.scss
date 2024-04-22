@@ -53,6 +53,11 @@
         justify-content: center;
         align-items: center;
         line-height: 1;
+
+        &:is(.has-color-2) {
+            color: #fff;
+            background: var(--blta-pr-2);
+        }
     }
 
     &:is(.has-color-white) {
@@ -70,6 +75,12 @@
             color: #000;
         }
     }
+
+    &:is(.has-color-2) {
+        color: #222429;
+    }
+
+
 }
 
 
@@ -85,6 +96,10 @@
 
     &:is(.has-color-white) {
         color: #fff;
+    }
+
+    &:is(.has-color-2) {
+        color: #222429;
     }
 
     @media #{$xl} {

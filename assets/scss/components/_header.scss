@@ -381,6 +381,8 @@
 .blta-header-3 {
   &-area {
     background-color: #222429;
+    position: relative;
+    z-index: 2;
   }
 
   &-container {
@@ -647,6 +649,10 @@
         .dropdown-menu {
           li {
             margin-right: 0;
+
+            &::after {
+              display: none;
+            }
             a {
               font-size: 18px;
             }

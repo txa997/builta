@@ -267,3 +267,173 @@
     about-2-end
 */
 
+/* 
+    about-3-start
+*/
+.blta-about-3 {
+
+    &-area {
+        position: relative;
+        z-index: 1;
+        padding-bottom: 220px;
+
+        @media #{$md,$xs} {
+            padding-bottom: 130px;
+        }
+    }
+
+    &-bg-il {
+        position: absolute;
+        right: -100px;
+        bottom: 0;
+
+        width: 32%;
+        z-index: -1;
+    }
+
+
+    &-row {
+        display: grid;
+        gap: 50px 60px;
+        grid-template-columns: 1fr 1.4fr;
+
+        @media #{$lg} {
+            gap: 50px 30px;
+        }
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-left {
+        padding-left: 35px;
+        position: relative;
+        z-index: 1;
+
+        @media #{$lg,$md,$xs} {
+            padding-left: 0;
+        }
+    }
+
+    &-img {
+        height: 525px;
+    }
+
+    &-img-2 {
+        position: absolute;
+        right: -130px;
+        top: 250px;
+        width: 390px;
+        height: 400px;
+        z-index: 1;
+
+        @media #{$lg,$md,$xs} {
+            width: 260px;
+            height: 300px;
+            right: 0;
+        }
+    }
+
+    &-il-img {
+        width: 85%;
+        position: absolute;
+        bottom: -129px;
+        left: -50px;
+        z-index: 2;
+
+        @media #{$md,$xs} {
+            display: none;
+        }
+    }
+
+    &-right {
+        padding-top: 30px;
+    }
+
+    &-content {
+        padding-left: 150px;
+
+        @media #{$xl} {
+            padding-left: 100px;
+        }
+
+        @media #{$lg,$md,$xs} {
+            padding-left: 0px;
+        }
+
+        .disc {
+            margin-bottom: 40px;
+        }
+
+        .innter-grid {
+            display: grid;
+            grid-template-columns: 1fr 3px 1.8fr;
+            align-items: center;
+            gap: 30px;
+
+            @media #{$xl,$lg,$md} {
+                grid-template-columns: 1fr 3px 3fr;
+            }
+            
+            @media #{$xs} {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            @media #{$sm} {
+                grid-template-columns: 1fr 3px 3fr;
+                gap: 30px;
+            }
+
+        
+            .line {
+                display: block;
+                width: 2px;
+                height: 80%;
+                background: var(--blta-pr-2);
+            }
+        }
+    }
+
+    &-counter {
+        gap: 5px;
+
+        .number {
+            font-size: 130px;
+            line-height: 1;
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 70px;
+            }
+        }
+
+        .disc {
+            font-size: 25px;
+            line-height: 1;
+            margin-bottom: 12px;
+        }
+    }
+
+    &-features {
+        gap: 15px;
+
+        .icon {
+            font-size: 80px;
+            color: #000;
+            flex: 0 0 auto;
+        }
+
+        .feature-title {
+            font-size: 22px;
+            margin-bottom: 14px;
+        }
+
+        .features-disc {
+            line-height: 25px;
+        }
+    }
+}
+/* 
+    about-3-end
+*/

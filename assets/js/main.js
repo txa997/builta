@@ -52,6 +52,25 @@ document.addEventListener("DOMContentLoaded", function () {
 			});
 		}
 
+		// hero-3-slider
+		if($('.blta-hero-3-active').length) {
+			let hero3 = new Swiper('.blta-hero-3-active', {
+				loop: true,
+				speed: 2000,
+				effect: 'fade',
+				autoplay: {
+					delay: 6000,
+				},
+				fadeEffect: {
+					crossFade: true
+				},
+				navigation: {
+					nextEl: ".blta_hero_3_next",
+					prevEl: ".blta_hero_3_prev",
+				},
+			});
+		}
+
 
 		// home-2-hero-2-animation
 		const h2tl = gsap.timeline();
@@ -333,7 +352,7 @@ gsap.utils.toArray('.blta-fade-down img').forEach((el, index) => {
 		trigger: ".blta-fade-down",
 		scrub: 2,
 		start: "top 70%",
-		end: "top 10%",
+		end: "top 50%",
 		toggleActions: "play none none reverse",
 		 markers: false
 	  }
@@ -349,7 +368,7 @@ var bltahro2 = gsap.timeline({
 	scrollTrigger: {
 	  animation: bltahro2,
 	  trigger: '.blta-hero-2-area',
-	  start: "top 100%",
+	  start: "top 0%",
 	  end: "bottom 0%",
 	  scrub: 2,
 	  toggleActions: "play reverse play reverse",
@@ -357,7 +376,23 @@ var bltahro2 = gsap.timeline({
 	}
 });
 	
-bltahro2.from( ".blta-hero-2-bg-img .bg-building" , { scale: 2 ,  duration:1 } )
+bltahro2.fromTo(".blta-hero-2-bg-img .bg-building" , { scale: 1 ,  duration:1 }, { scale: 2  });
+
+// hero-3-animation
+var bltahro3 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: bltahro3,
+	  trigger: '.blta-hero-3-area',
+	  start: "top 0%",
+	  end: "bottom 0%",
+	  scrub: 2,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+bltahro3.fromTo(".blta-hero-3-bg img" , { scale: 1 ,  duration:1 }, { scale: 2  });
 
 // blta-categories-1-img
 var bltact1 = gsap.timeline({
