@@ -184,3 +184,170 @@
     testimonial-1-end
 */
 
+
+
+/* 
+    testimonial-2-start
+*/
+
+.blta-testimonial-3 {
+    &-area {
+        position: relative;
+        z-index: 1;
+        background-color: #F7F7F7;
+    }
+
+    &-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 50%;
+        z-index: -1;
+        height: 525px;
+
+        @media #{$xs} {
+            width: 100%;  
+        }
+    }
+
+    &-tabs-and-btn {
+        padding-left: 30px;
+        gap: 20px;
+        @media #{$xl,$lg} {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        @media #{$md} {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            background-color: #fff;
+        }
+        @media #{$xs} {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px 30px;
+        }
+    }
+
+    &-tabs {
+        &-btn {
+            gap: 0px 50px;
+            position: relative;
+            z-index: 1;
+
+            @media #{$xs} {
+                gap: 0px 20px;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 3px;
+                background-color: #e2e9f5;
+                z-index: -1;
+            }
+
+            .nav-link {
+                font-size: 20px;
+                background: transparent;
+                padding: 20px 0;
+                border-bottom: 3px solid;
+                border-color: transparent;
+
+                &:hover {
+                    color: var(--blta-pr-2);
+                }
+
+                &:is(.active) {
+                    border-color: #000;
+                }
+            }
+        }
+    }
+
+    &-slider {
+        margin-right: -314px;
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            margin-right: 0px;
+        }
+
+        &-item {
+            position: relative;
+            z-index: 1;
+            border: 5px solid;
+            border-color: transparent;
+            transition: .5s var(--cube-1);
+            overflow: hidden;
+
+            .item-img {
+                  height: 500px;
+            }
+
+            .item-content {
+                background: #fff;
+                position: absolute;
+                bottom: 44px;
+                padding: 25px 30px;
+                left: -100%;
+                transition: 1000ms var(--cube-1);
+            }
+
+            .item-title {
+                font-size: 25px;
+                transition: 400ms var(--cube-1);
+                margin-bottom: 10px;
+
+                &:hover {
+                    color: var(--blta-pr-2);
+                }
+            }
+
+            .item-disc {
+                font-size: 18px;
+                color: #878787;
+            }
+
+
+        }
+
+        &-btn {
+            gap: 10px;
+            .blta-slider-btn-1 {
+                border-color: #000;
+                color: #000;
+
+                &:hover {
+                    border-color: transparent;
+                }
+            }
+        }
+    }
+
+    &-slider {
+        .swiper-container {
+            .swiper-wrapper {
+                .swiper-slide {
+                    &:is(.swiper-slide-active) {
+                        .blta-testimonial-3-slider-item {
+                            border-color: var(--blta-pr-2);
+                            .item-content {
+                                left: 0%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* 
+    testimonial-2-end
+*/
+

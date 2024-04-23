@@ -305,3 +305,119 @@
 /* 
     services-3-end
 */
+
+
+/* 
+    services-4-start
+*/
+
+.blta-services-4 {
+    &-area {
+        background-color: #F7F7F7;
+        position: relative;
+        z-index: 1;
+    }
+    &-il-1 {
+        width: 22%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+            width: 10%;
+        }
+    }
+
+    &-il-2 {
+        width: 15%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+            width: 10%;
+        }
+    }
+}
+
+.blta-services-2-card {
+    &:is(.has-home-3) {
+        background: transparent;
+        position: relative;
+        border: none;
+
+
+
+        &:nth-child(1) {
+            border-bottom: 1px solid  #E9E9E9;
+
+            &::after {
+                content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                right: -9px;
+                bottom: -9px;
+                border: 5px solid var(--blta-pr-2);
+                border-radius: 50%;
+                z-index: 1;
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            border-bottom: 1px solid  #E9E9E9;
+
+            &::after {
+                content: "";
+                width: 15px;
+                height: 15px;
+                position: absolute;
+                right: -9px;
+                bottom: -9px;
+                border: 5px solid var(--blta-pr-2);
+                border-radius: 50%;
+                z-index: 1;
+                @media #{$md,$xs} {
+                    display: none;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            border-bottom: 1px solid  #E9E9E9;
+        }
+
+        &:nth-child(4) {
+            @media #{$md,$xs} {
+                border-bottom: 1px solid  #E9E9E9;
+            }
+        }
+
+        &:nth-child(5) {
+            @media #{$md,$xs} {
+                border-bottom: 1px solid  #E9E9E9;
+            }
+        }
+
+        &:nth-child(6) {
+            @media #{$md,$xs} {
+                border-bottom: 1px solid  #E9E9E9;
+            }
+        }
+
+        .card-title {
+            align-items: self-start;
+            flex-direction: column;
+        }
+
+
+        
+    }
+}
+/* 
+    services-4-start
+*/

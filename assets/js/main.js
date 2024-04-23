@@ -410,6 +410,24 @@ var bltact1 = gsap.timeline({
 	
 bltact1.from( ".blta-categories-1-img img" , { yPercent: -100 , stagger: 0.2 ,  duration:1 } )
 
+// blta-portfolio-1
+var bltapot1 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: bltapot1,
+	  trigger: '.blta-portfolio-1-left',
+	  start: "top 80%",
+	  end: "top 0%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+bltapot1.fromTo( ".blta-portfolio-1-left" , { rotate: 90 ,  duration:1 } , { rotate: 35} )
+		.fromTo( ".blta-portfolio-1-img-2" , { y: 0 ,  duration:1 }, { y: 80 } , "<" )
+		.fromTo( ".blta-portfolio-1-grid .icon" , { rotate: 0 , scale: 3 ,  duration:1 }, { scale: 1, rotate: 360 } , "<" )
+
 
 
 
@@ -599,6 +617,38 @@ let bltatestimonial1 = new Swiper('.testimonial-2-active', {
 
 });
 
+
+// testimonial-3-active
+let testimonial3 = new Swiper('.testimonial-3-active', {
+	loop: true,
+	spaceBetween: 20,
+	slidesPerView: 3,
+	speed: 1000,
+	autoplay: {
+		delay: 5000,
+	},
+	navigation: {
+		nextEl: ".testimonial_3_next",
+		prevEl: ".testimonial_3_prev",
+	},
+	breakpoints: {
+		0: {
+			slidesPerView: 1,
+		},
+		576: {
+			slidesPerView: 1,
+		},
+		768: {
+			slidesPerView: 2,
+		},
+		992: {
+			slidesPerView: 2,
+		},
+		1200: {
+			slidesPerView: 3,
+		},
+	},
+});
 
 
 
