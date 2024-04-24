@@ -312,6 +312,12 @@
                 color: #878787;
             }
 
+            &:hover {
+                border-color: var(--blta-pr-2);
+                .item-content {
+                    left: 0%;
+                }
+            }
 
         }
 

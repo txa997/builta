@@ -36,3 +36,140 @@
 /* 
     cta-1-end
 */
+
+/* 
+    cta-3-start
+*/
+.blta-cta-3 {
+    &-area {
+        background: #3E363D;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #2A2C38;
+            // background: linear-gradient(90deg, rgba(155,150,255,1) 0%, rgba(42,44,56,1) 100%);
+            z-index: -1;
+            opacity: 80%;
+            transition: .5s var(--cube-1);
+        }
+
+
+
+        &:is(.active) {
+            &::after {
+                opacity: 0;
+                transition-delay: .3s;
+            }
+            .blta-cta-3-content {
+                transform: scale(2);
+                opacity: 0;
+                visibility: hidden;
+                transition-delay: 0;
+            }
+
+            .blta-cta-3-button {
+                opacity: 1;
+                visibility: visible;
+                transition-delay: .4s;
+            }
+        }
+    }
+
+    &-button {
+        outline: none;
+        background: transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 20px;
+        border: 1px solid #fff;
+        line-height: 1;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+        transition: 400ms var(--cube-1);
+        opacity: 0;
+        visibility: hidden;
+
+        &:hover {
+            background-color: var(--blta-pr-2);
+            border-color: transparent;
+            color: #fff;
+        }
+    }
+
+    &-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -2;
+    }
+
+    &-content {
+        max-width: 745px;
+        margin-left: auto;
+        margin-right: auto;
+        transition: .5s var(--cube-1);
+        transition-delay: .5s;
+
+        .blta-section-title-1 {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+.play-btn-1 {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    background: transparent;
+    border: none;
+    outline: none;
+    
+    .icon {
+        height: 77px;
+        width: 77px;
+        background: var(--blta-pr-2);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 23px;
+        flex: 0 0 auto;
+    }
+
+    .text {
+        text-align: left;
+    }
+
+    &:hover {
+        .icon {
+            animation: jello 1s;
+        }
+    }
+}
+
+/* 
+    cta-3-end
+*/
+
+/* 
+    cta-4-start
+*/
+
+/* 
+    cta-4-end
+*/

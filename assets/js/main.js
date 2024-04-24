@@ -430,6 +430,21 @@ bltapot1.fromTo( ".blta-portfolio-1-left" , { rotate: 90 ,  duration:1 } , { rot
 
 
 
+// blta-blog-3
+var bltablog1 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: bltablog1,
+	  trigger: '.blta-blog-3-area',
+	  start: "top 0%",
+	  end: "bottom 0%",
+	  scrub: 3,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+bltablog1.from( ".blta-blog-3-bg-il" , { xPercent: -100 ,  duration:1 } )
 
 
 
@@ -650,7 +665,18 @@ let testimonial3 = new Swiper('.testimonial-3-active', {
 	},
 });
 
+$('.play-btn-1').on("click", function() {
+    $('.blta-cta-3-area').toggleClass("active");
+});
 
+$('.blta-cta-3-button').on("click", function() {
+    $('.blta-cta-3-area').toggleClass("active");
+});
+
+
+$(function () {
+	$('[data-toggle="tooltip"]').tooltip()
+})
 
 // cursor follow
 $(document).ready(function () {
