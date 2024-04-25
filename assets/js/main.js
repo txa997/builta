@@ -95,24 +95,24 @@ document.addEventListener("DOMContentLoaded", function () {
 function glystickyHeader() {
     var $window = $(window);
     var lastScrollTop = 0;
-    var $header = $('.gly_sticky_header');
+    var $header = $('.txa_sticky_header');
     var headerHeight = $header.outerHeight() + 30;
 
     $window.scroll(function () {
       var windowTop = $window.scrollTop();
 
       if (windowTop >= headerHeight) {
-        $header.addClass('gly_sticky');
+        $header.addClass('txa_sticky');
       } else {
-        $header.removeClass('gly_sticky');
-        $header.removeClass('gly_sticky_show');
+        $header.removeClass('txa_sticky');
+        $header.removeClass('txa_sticky_show');
       }
 
-      if ($header.hasClass('gly_sticky')) {
+      if ($header.hasClass('txa_sticky')) {
         if (windowTop < lastScrollTop) {
-          $header.addClass('gly_sticky_show');
+          $header.addClass('txa_sticky_show');
         } else {
-          $header.removeClass('gly_sticky_show');
+          $header.removeClass('txa_sticky_show');
         }
       }
 
@@ -446,6 +446,21 @@ var bltablog1 = gsap.timeline({
 	
 bltablog1.from( ".blta-blog-3-bg-il" , { xPercent: -100 ,  duration:1 } )
 
+// cta-4
+var bltacta4 = gsap.timeline({
+
+	scrollTrigger: {
+	  animation: bltacta4,
+	  trigger: '.blta-cta-4-area',
+	  start: "top 90%",
+	  end: "top 40%",
+	  scrub: 1,
+	  toggleActions: "play reverse play reverse",
+	  markers: false
+	}
+});
+	
+bltacta4.from( ".blta-cta-4-img" , { yPercent: 100 ,  duration:1 } )
 
 
 
@@ -665,6 +680,8 @@ let testimonial3 = new Swiper('.testimonial-3-active', {
 	},
 });
 
+
+// cta-3-toggle-class
 $('.play-btn-1').on("click", function() {
     $('.blta-cta-3-area').toggleClass("active");
 });
@@ -673,7 +690,7 @@ $('.blta-cta-3-button').on("click", function() {
     $('.blta-cta-3-area').toggleClass("active");
 });
 
-
+// bootstrap-toltip
 $(function () {
 	$('[data-toggle="tooltip"]').tooltip()
 })

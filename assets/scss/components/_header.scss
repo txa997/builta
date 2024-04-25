@@ -673,32 +673,55 @@
   header-3-css-end
 */
 
-
-
-
-
-
-
 /* 
   sticky-header-css-start
 */
-.gly_sticky_header {
+.txa_sticky_header {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   right: 0;
   transition: 500ms var(--cube-1);
+  z-index: 8;
 
-  &:is(.gly_sticky) {
-    transform: translateY(-100%);
+  &:is(.blta-header-1-area) {
+    top: 25px;
+    &:is(.txa_sticky) {
+      transform: translateY(-150%);
+ 
 
-    &:is(.gly_sticky_show) {
-      transform: translateY(0%);
+      &:is(.txa_sticky_show) {
+        transform: translateY(0%);
+      }
     }
-  }
-}
 
+  }
+
+  &:is(.blta-header-2-area) {
+    top: 30px;
+    &:is(.txa_sticky) {
+      transform: translateY(-150%);
+      background-color: #222429;
+      &:is(.txa_sticky_show) {
+        transform: translateY(0%);
+      }
+    }
+
+  }
+
+  &:is(.blta-header-3-area) {
+    &:is(.txa_sticky) {
+      transform: translateY(-150%);
+      background-color: #222429;
+      &:is(.txa_sticky_show) {
+        transform: translateY(0%);
+      }
+    }
+
+  }
+
+}
 
 
 /* 

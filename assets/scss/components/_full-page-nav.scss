@@ -88,7 +88,7 @@
         transition: 300ms ease-in-out;
       }
       &:hover {
-        color: var(--gly-pr-1);
+        color: var(--blta-pr-1);
       }
     }
 
@@ -140,7 +140,7 @@
     text-transform: capitalize;
 
     &:hover {
-      background-color: var(--gly-pr-1);
+      background-color: var(--blta-pr-1);
       color: #fff;
       transform: scale(95%);
     }
@@ -161,7 +161,7 @@
     transition: 400ms var(--cube-1);
 
     &:hover {
-      color: var(--gly-pr-1);
+      color: var(--blta-pr-1);
       opacity: 1;
     }
   }
@@ -186,7 +186,12 @@
     position: static !important;
     -webkit-transform: none !important;
             transform: none !important;
+
+
   }
+
+
+
   .mobile-main-navigation .navbar-nav li {
     width: 100%;
     display: block;
@@ -203,7 +208,7 @@
     font-size: 30px;
     transition: 400ms var(--cube-1);
     &:hover {
-      color: var(--gly-pr-1);
+      color: var(--blta-pr-1);
     }
   }
 
@@ -238,29 +243,39 @@
     font-size: 20px;
   }
    .mobile-main-navigation .navbar-nav .dropdown-menu li a:hover {
-    color: var(--gly-pr-1);
+    color: var(--blta-pr-1);
     background-color: transparent;
   }
   .mobile-main-navigation .dropdown {
     position: relative;
   }
-  .mobile-main-navigation .dropdown .dropdown-btn {
-    color: #fff;
-    position: absolute;
-    top: 8px;
-    right: 0;
-    height: 30px;
-    padding: 5px 10px;
-    font-size: 28px;
-    cursor: pointer;
-    &:hover {
-      color: var(--gly-pr-1);
+  .mobile-main-navigation {
+    .dropdown .dropdown-btn {
+      color: #fff;
+      position: absolute;
+      top: 8px;
+      right: 0;
+      height: 30px;
+      padding: 5px 10px;
+      font-size: 28px;
+      cursor: pointer;
+      &:hover {
+        color: var(--blta-pr-1);
+      }
+    }
+
+    li {
+      .dropdown-menu {
+        .dropdown-btn {
+          font-size: 16px;
+        }
+      }
     }
   }
   .mobile-main-navigation .dropdown .dropdown-btn.toggle-open {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg);
-            color: var(--gly-pr-1);
+            color: var(--blta-pr-1);
   }
   
 /* 

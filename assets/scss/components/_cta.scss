@@ -169,6 +169,109 @@
 /* 
     cta-4-start
 */
+.blta-cta-4 {
+    &-area {
+        position: relative;
+        z-index: 1;
+        margin-top: -50px;
+
+        @media #{$md,$xs} {
+            margin-top: 0px;
+            padding-top: 50px;
+        }
+    }
+
+    &-bg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: calc( 100% - 50px);
+        z-index: -1;
+
+        @media #{$md,$xs} {
+            height: 100%;
+        }
+    }
+
+    &-row {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr 1fr;
+        align-items: center;
+        gap: 50px;
+        margin-left: -130px;
+
+        @media #{$xxl,$xl,$lg} {
+            gap: 20px;
+            margin-left: 0;
+        }
+
+        @media #{$md,$xs} {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: baseline;
+            gap: 50px;
+            margin-left: 0;
+        }
+    }
+
+    &-img {
+        transition: var(--cube-1);
+    }
+
+    &-content {
+        .blta-list-1-item::after {
+            border: 5px solid #c9c9c9;
+        }
+    }
+
+    &-form {
+
+        .input-item {
+            position: relative;
+            z-index: 1;
+        }
+    
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 35px;
+            transform: translateY(-50%);
+            line-height: 1;
+        }
+        
+        input {
+            width: 100%;
+            height: 70px;
+            border: none;
+            outline: none;
+            padding-left: 80px;
+            padding-right: 15px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #898989;
+        }
+    
+    
+        .form-btn {
+            background: var(--blta-pr-2);
+            width: 100%;
+            min-height: 70px;
+            padding: 10px;
+            font-size: 18px;
+            transition: 400ms var(--cube-1);
+
+            &:hover {
+                letter-spacing: .5px;
+                transform: scale(95%);
+            }
+        }
+        
+        
+    }
+}
+
+
 
 /* 
     cta-4-end
